@@ -24,6 +24,11 @@ const SMOKE = {
 };
 const smoke = (p, pl) => { const c = p.sm && p.sm[pl]; return c ? ` <span class="sm sm-${c}" title="${esc(SMOKE[c][1])}">${SMOKE[c][0]}</span>` : ""; };
 const REASON = { not_opted_in: "recipe not opted in", opted_in_no_build: "opted in, build missing", dropped: "build dropped", no_recipe: "recipe gone" };
+/* Embedding (e.g. yuvalbloch.com/wild-west/): a page with <div id="app"> and window.BIOARM = {base, back}
+   gets this page's markup from `base` and every relative link points back to `base`. */
+const EMBED = window.BIOARM || null;
+const BASE = (EMBED && EMBED.base) || "";
+const U = (p) => (p && BASE && !/^(https?:|#|\/|mailto:|blob:)/.test(p) ? BASE + p : p);
 const $ = (s) => document.querySelector(s);
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const fmt = (n) => Number(n).toLocaleString("en-US");
@@ -32,9 +37,9 @@ const D = {};
 function chip(code, href, extra) {
   const [label, title] = ST[code] || ST["-"];
   const t = esc(title + (extra ? ` (${extra})` : ""));
-  return href ? `<a class="chip s-${code}" href="${esc(href)}" title="${t}">${label}</a>` : `<span class="chip s-${code}" title="${t}">${label}</span>`;
+  return href ? `<a class="chip s-${code}" href="${esc(U(href))}" title="${t}">${label}</a>` : `<span class="chip s-${code}" title="${t}">${label}</span>`;
 }
-const pkgLink = (n) => `pkg/${encodeURIComponent(n)}/`;
+const pkgLink = (n) => U(`pkg/${encodeURIComponent(n)}/`);
 function envLink(id) {
   const [src, path] = [id.slice(0, id.indexOf(":")), id.slice(id.indexOf(":") + 1)];
   return src === "nf-core" ? `https://github.com/nf-core/modules/tree/master/modules/nf-core/${path}`
@@ -42,8 +47,20 @@ function envLink(id) {
 }
 const code = (p, pl, i = 0) => (p.v[i] ? p.v[i][1][COLS.indexOf(pl)] : "-");
 
+async function shell() {
+  const html = await fetch(BASE + "index.html").then((r) => r.text());
+  const doc = new DOMParser().parseFromString(html, "text/html");
+  doc.querySelectorAll("[href],[src]").forEach((e) => {
+    for (const a of ["href", "src"]) if (e.hasAttribute(a)) e.setAttribute(a, U(e.getAttribute(a)));
+  });
+  doc.querySelectorAll("script, noscript").forEach((e) => e.remove());
+  const back = (EMBED.back || []).map(([href, label]) => `<a href="${esc(href)}">${label}</a>`).join(" · ");
+  $("#app").innerHTML = (back ? `<div class="embed-back wrap">${back}</div>` : "") + doc.body.innerHTML;
+}
+
 async function load() {
-  const get = (f) => fetch(`data/${f}`).then((r) => (r.ok ? r.json() : null)).catch(() => null);
+  if (EMBED && !$("#tabs")) await shell();
+  const get = (f) => fetch(`${BASE}data/${f}`).then((r) => (r.ok ? r.json() : null)).catch(() => null);
   [D.sum, D.pk, D.env, D.news] = await Promise.all([get("summary.json"), get("packages.json"), get("envs.json"), get("news.json")]);
   D.byName = new Map((D.pk?.pkgs || []).map((p) => [p.n, p]));
   header();
