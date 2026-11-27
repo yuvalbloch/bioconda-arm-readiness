@@ -99,7 +99,7 @@ def merge_shards(dirs):
             shutil.copytree(d / "logs", LOGS, dirs_exist_ok=True)
         stats += [json.loads(s.read_text()) for s in d.glob("solve-stats-*.json")]
     con.commit()
-    if stats:
+    if stats and sum(s.get("solves", 0) for s in stats):     # a rerun with nothing left to solve keeps the night's numbers
         snap = latest_snap_dir()
         tot = {k: sum(s.get(k, 0) for s in stats) for k in ("solves", "new", "same", "error_kept_previous", "errors", "seconds")}
         tot["error_samples"] = [e for s in stats for e in s.get("error_samples", [])][:30]
