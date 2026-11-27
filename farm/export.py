@@ -203,7 +203,7 @@ def page(title, desc, body, depth):
 <title>{esc(title)}</title><meta name="description" content="{esc(desc)}">
 <link rel="stylesheet" href="{up}style.css"><link rel="alternate" type="application/rss+xml" title="What's new" href="{up}feed.xml">
 </head><body><header class="top"><a class="brand" href="{up}">Bioconda on Apple Silicon</a>
-<nav><a href="{up}#gaps">Apple Silicon gaps</a><a href="{up}#tools">All tools</a><a href="{up}#pipelines">Pipelines</a><a href="{up}#news">What's new</a><a href="{up}#check">Check an environment</a><a href="{up}#about">About</a></nav></header>
+<nav><a href="{up}#tools">All tools</a><a href="{up}#gaps">Don't work on Apple Silicon</a><a href="{up}#pipelines">Pipelines</a><a href="{up}#news">What's new</a><a href="{up}#check">Check an environment</a><a href="{up}#about">About</a></nav></header>
 <main>{body}</main>
 <footer>Every result comes from a stored solver run; click a cell for its log. <a href="https://github.com/yuvalbloch/bioconda-arm-readiness">Code and data</a> ·
 <a href="https://github.com/yuvalbloch/bioconda-arm-readiness/blob/main/docs/methodology.md">Methodology</a> ·

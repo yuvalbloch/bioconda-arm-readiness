@@ -17,8 +17,8 @@
       <span class="made">Every result comes from a real solver run with its log; a sample is checked against real installs on real machines. Updated every night. <span id="updated"></span></span></p>
     <div class="stats" id="stats"></div>
     <nav class="tabs" id="tabs">
-      <a href="#gaps" data-tab="gaps">Apple Silicon gaps</a>
       <a href="#tools" data-tab="tools">All tools</a>
+      <a href="#gaps" data-tab="gaps">Don't work on Apple Silicon <span id="gaps-n"></span></a>
       <a href="#pipelines" data-tab="pipelines">Pipelines</a>
       <a href="#blockers" data-tab="blockers">Blockers</a>
       <a href="#news" data-tab="news">What's new</a>
@@ -29,7 +29,7 @@
 </header>
 <main class="wrap">
   <section class="tab" id="tab-gaps">
-    <p class="note">Tools whose <b>newest version installs on an Intel Mac but not on Apple Silicon</b>, most-downloaded first. They work today only through Rosetta 2, or not at all.
+    <p class="note">This list shows <b>only the problems</b>: tools whose <b>newest version installs on an Intel Mac but not on Apple Silicon</b>. Most tools do work; see <a href="#tools">All tools</a>., most-downloaded first. They work today only through Rosetta 2, or not at all.
       “Intel only” = no Apple Silicon build of this version. “Dependency missing” = it has a build, but something it needs doesn't.</p>
     <div class="controls">
       <input type="search" id="gaps-q" placeholder="Filter tools…" aria-label="Filter tools">

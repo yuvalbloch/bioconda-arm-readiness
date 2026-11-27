@@ -55,6 +55,7 @@ function header() {
   const s = D.sum;
   if (!s) return;
   $("#updated").textContent = `Package index of ${s.snapshot}.`;
+  $("#gaps-n").textContent = `(${fmt(s.intel_only_tools)})`;
   const nf = s.envs_by_source["nf-core"], sm = s.envs_by_source.snakemake;
   const mac = s.newest["osx-arm64"] || {};
   const good = (mac.native || 0) + (mac.noarch || 0);
@@ -71,9 +72,9 @@ function header() {
 }
 
 function route() {
-  const tab = (location.hash || "#gaps").slice(1).split("/")[0];
+  const tab = (location.hash || "#tools").slice(1).split("/")[0];
   const known = ["gaps", "tools", "pipelines", "blockers", "news", "check", "about"];
-  const t = known.includes(tab) ? tab : "gaps";
+  const t = known.includes(tab) ? tab : "tools";
   document.querySelectorAll(".tab").forEach((e) => e.classList.toggle("active", e.id === `tab-${t}`));
   document.querySelectorAll("#tabs a").forEach((e) => e.classList.toggle("active", e.dataset.tab === t));
   ({ gaps, tools, pipelines, blockers, news, check, about })[t]();
