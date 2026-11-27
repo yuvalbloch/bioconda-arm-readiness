@@ -27,6 +27,11 @@ from db import connect  # noqa: E402
 
 CODE = {"native": "N", "noarch": "A", "solves": "S", "rosetta_only": "R", "no_build": "B", "unsolvable": "U",
         "needs_newer_os": "O", "infra_error": "E"}
+SMOKE_CODE = {"runs": "V", "installs": "I", "test_fail": "T", "install_fail": "F", "infra_error": "E"}
+SMOKE_LABEL = {"runs": "✓✓ installed and passed its own test", "installs": "✓ installed (the package has no test)",
+               "test_fail": "✗ installed, but its own test failed", "install_fail": "✗ the real install failed",
+               "infra_error": "? farm problem"}
+ARM = ["osx-arm64", "linux-aarch64"]
 PLAT_NAME = {"osx-arm64": "Apple Silicon", "linux-aarch64": "arm64 Linux", "osx-64": "Intel Mac", "linux-64": "x86 Linux"}
 COLS = ["linux-64", "linux-aarch64", "osx-64", "osx-arm64"]
 LABEL = {"native": "✓ native", "noarch": "✓ noarch", "solves": "✓ installs", "rosetta_only": "✗ Intel only (Rosetta)",
@@ -93,7 +98,8 @@ def build_model(con, plan, corpora, reasons):
                 ok = [x["version"] for x in vers[1:] if x["cells"][pl] and x["cells"][pl]["status"] in GOOD]
                 if ok:
                     pin[pl] = ok[0]
-        pkgs.append({"name": name, "downloads": p["downloads"], "pipeline_uses": p["pipeline_uses"],
+        smoke = {pl: cell("smoke", name, vers[0]["version"], pl) for pl in ARM} if vers else {}
+        pkgs.append({"name": name, "downloads": p["downloads"], "pipeline_uses": p["pipeline_uses"], "smoke": smoke,
                      "conda_forge": bool(p.get("conda_forge") and not p.get("builds")),
                      "versions": vers, "pin": pin, "reasons": reason.get(name, {}),
                      "used_by": sorted(set(used_by.get(name, [])))})
@@ -121,6 +127,8 @@ def summarize(pkgs, envs, snapshot):
             row[pl] = dict(Counter(e["cells"][pl]["status"] for e in es if e["cells"][pl]))
         row["intel_mac_only"] = sum(1 for e in es if e["cells"]["osx-arm64"] and e["cells"]["osx-arm64"]["status"] == "rosetta_only")
         s["envs_by_source"][src] = row
+    s["smoke"] = {pl: dict(Counter(p["smoke"][pl]["status"] for p in pkgs if p["smoke"].get(pl))) for pl in ARM}
+    s["smoke_date"] = max((p["smoke"][pl]["checked"] for p in pkgs for pl in ARM if p["smoke"].get(pl)), default=None)
     s["solve_cells"] = sum(len([c for c in v["cells"].values() if c]) for p in pkgs for v in p["versions"]) + \
         sum(len([c for c in e["cells"].values() if c]) for e in envs)
     return s
@@ -140,6 +148,7 @@ def compact_packages(pkgs):
         newest = p["versions"][0]["cells"] if p["versions"] else {}
         out.append({"n": p["name"], "d": p["downloads"], "u": len(p["used_by"]), "cf": int(p["conda_forge"]),
                     "v": v, "b": b, "pin": p["pin"], "r": p["reasons"],
+                    "sm": {pl: SMOKE_CODE.get(c["status"], "E") for pl, c in p["smoke"].items() if c},
                     "since": newest.get(TARGET, {}).get("since") if newest.get(TARGET) else None})
     return out
 
@@ -226,6 +235,14 @@ def tool_page(p, history, snapshot):
                                    (p["versions"][0]["cells"].get(TARGET) or {}).get("status") in GOOD else None)
     install = (f"<h2>Install on Apple Silicon</h2><pre>micromamba create -n {esc(name)} -c conda-forge -c bioconda "
                f"--strict-channel-priority {esc(name)}={esc(pin)}</pre>") if pin else ""
+    sm = ""
+    if any(p["smoke"].values()):
+        items = "".join(f'<li><b>{esc(PLAT_NAME[pl])}:</b> <a href="../../{esc(c["log"])}">{esc(SMOKE_LABEL[c["status"]])}</a> '
+                        f'<span class=muted>(version {esc(p["versions"][0]["version"])}, checked {esc(c["checked"])})</span></li>'
+                        for pl, c in p["smoke"].items() if c)
+        sm = ("<h2>On a real machine</h2><p class=small>Installed for real on GitHub's Apple Silicon (macos-15) and arm64 Linux "
+              "(ubuntu-24.04-arm) machines, then the package's own test (the one bioconda's CI ran when it built it) was run.</p>"
+              f"<ul>{items}</ul>")
     used = ""
     if p["used_by"]:
         items = "".join(f'<li><a href="{esc(env_link(e))}">{esc(e)}</a></li>' for e in p["used_by"][:60])
@@ -243,7 +260,7 @@ def tool_page(p, history, snapshot):
             f"<p class=small>Solved for macOS 14.0 / glibc 2.28 machines with conda-forge + bioconda (strict priority), "
             f"package index of {esc(snapshot)}. Click a result for the full solver log.</p>"
             + (f"<h2>Why the arm64 build is missing</h2><ul>{reasons}</ul>" if reasons else "")
-            + install + used + hist)
+            + sm + install + used + hist)
     desc = f"Does {name} install natively on Apple Silicon (M1–M4, osx-arm64) and arm64 Linux? Status of every recent version, from real solver runs."
     return page(f"{name} on Apple Silicon (osx-arm64) and arm64 Linux", desc, body, 2)
 
@@ -281,7 +298,7 @@ def main():
     con = connect()
     day = latest_snap_dir()
     plan = read_json(PLAN_PATH)
-    corpora = read_json(day / "corpora.json", {"envs": []})
+    corpora = read_json(day / "corpora.json") or read_json(DATA / "corpora.json", {"envs": []})
     reasons = read_json(day / "reasons.json", {"rows": []})
     snapshot = max(r[0] for r in con.execute("SELECT MAX(last_snapshot) FROM checks"))
     pkgs, envs = build_model(con, plan, corpora, reasons)
@@ -318,6 +335,7 @@ def main():
 
     wanted = {c["log"] for p in pkgs for x in p["versions"] for c in x["cells"].values() if c and c["log"]}
     wanted |= {c["log"] for e in envs for c in e["cells"].values() if c and c["log"]}
+    wanted |= {c["log"] for p in pkgs for c in p["smoke"].values() if c and c["log"]}
     rels = [r for (r,) in con.execute("SELECT log FROM runs") if log_url(r) in wanted]
     _, n = copy_logs(con, rels)
 

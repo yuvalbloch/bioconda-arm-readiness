@@ -63,7 +63,7 @@ def main():
     prev = {}
     for k, u, v, p, s, st, bl in rows:
         key = (k, u, v, p)
-        if s == today and s != first_snapshot and p in ARM and st != "infra_error":
+        if s == today and s != first_snapshot and p in ARM and k in ("pkg", "env") and st != "infra_error":
             old = prev.get(key)
             if not (k == "pkg" and (u, v) not in planned):
                 typ, text = event_text(k, u, v, p, old, st, json.loads(bl))

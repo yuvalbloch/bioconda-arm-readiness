@@ -21,6 +21,13 @@ env units (a real nf-core / Snakemake environment):
   infra_error | solves | rosetta_only (osx-arm64 fails while osx-64 solves) | unsolvable
   | needs_newer_os (same rule as above)
 
+smoke units (phase 6: a real install + the package's own test on a real arm64 machine, smoke.py):
+  runs            installed, and the package's own test (the one bioconda's CI ran) passed   ✓✓
+  installs        installed; the package carries no runnable test                           ✓i
+  test_fail       installed, but its own test failed (log attached)                          ✗t
+  install_fail    the real install failed although the solver said it installs              ✗i
+  infra_error     timeout or download problem
+
 Blockers are package names the solver itself reported as having "no candidates" (db.blockers).
 """
 import json
@@ -41,11 +48,14 @@ CREATE TABLE status (
 );
 """
 GOOD = {"native", "noarch", "solves"}
+SMOKE = {"passed": "runs", "no_test": "installs", "test_failed": "test_fail", "install_failed": "install_fail", "error": "infra_error"}
 
 
 def status_of(r, intel):
     """r: the cell's current run row; intel: the same unit's current osx-64 row (or None)."""
     kind, raw, plat = r["unit_type"], r["raw"], r["platform"]
+    if kind == "smoke":
+        return SMOKE.get(raw, "infra_error"), []
     bl = blockers(r["message"]) if raw == "unsolvable" else []
     intel_ok = intel is not None and intel["raw"] == "solved"
     if raw == "error":

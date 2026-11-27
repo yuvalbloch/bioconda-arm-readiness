@@ -15,6 +15,14 @@ const ST = {
   "-": ["–", "not tested"],
 };
 const GOOD = new Set(["N", "A", "S"]);
+const SMOKE = {
+  V: ["✓✓", "installed for real on a real machine and passed the package's own test"],
+  I: ["✓i", "installed for real on a real machine (the package has no test)"],
+  T: ["✗t", "installed on a real machine, but the package's own test failed"],
+  F: ["✗i", "the real install failed on a real machine"],
+  E: ["?", "farm problem during the real-machine test"],
+};
+const smoke = (p, pl) => { const c = p.sm && p.sm[pl]; return c ? ` <span class="sm sm-${c}" title="${esc(SMOKE[c][1])}">${SMOKE[c][0]}</span>` : ""; };
 const REASON = { not_opted_in: "recipe not opted in", opted_in_no_build: "opted in, build missing", dropped: "build dropped", no_recipe: "recipe gone" };
 const $ = (s) => document.querySelector(s);
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -58,6 +66,7 @@ function header() {
     `<div class="stat bad"><b>${fmt(nf.intel_mac_only + sm.intel_mac_only)}</b><span>of ${fmt(nf.total + sm.total)} nf-core / Snakemake steps are Intel-Mac only</span></div>`,
     `<div class="stat good"><b>${fmt(good)}</b><span>of ${fmt(s.packages)} tools install on Apple Silicon</span></div>`,
     cal ? `<div class="stat good"><b>${calAgree}/${calN}</b><span>solver answers matched real installs (<a href="#about">calibration</a>)</span></div>` : "",
+    s.smoke && s.smoke["osx-arm64"] && s.smoke["osx-arm64"].runs ? `<div class="stat good"><b>${fmt(s.smoke["osx-arm64"].runs)}</b><span>tools installed and passed their own test on a real Apple Silicon Mac</span></div>` : "",
   ].join("");
 }
 
@@ -120,7 +129,7 @@ function tools() {
     $("#tools-table").innerHTML = `<thead><tr><th>Tool</th><th>Newest</th>${COLS.map((c) => `<th>${PNAME[c]}</th>`).join("")}<th>Apple Silicon: use</th><th class="num">Downloads</th></tr></thead><tbody>` +
       rows.slice(0, limit).map((p) =>
         `<tr><td class="name"><a href="${pkgLink(p.n)}">${esc(p.n)}</a>${p.cf ? ' <span class="muted small" title="served by conda-forge with the standard setup">cf</span>' : ""}</td><td>${esc(p.v[0]?.[0] || "")}</td>` +
-        COLS.map((c) => `<td>${chip(code(p, c), pkgLink(p.n), (p.b[`${p.v[0]?.[0]}|${c}`] || []).join(", "))}</td>`).join("") +
+        COLS.map((c) => `<td>${chip(code(p, c), pkgLink(p.n), (p.b[`${p.v[0]?.[0]}|${c}`] || []).join(", "))}${smoke(p, c)}</td>`).join("") +
         `<td>${p.pin["osx-arm64"] ? esc(p.pin["osx-arm64"]) : ""}</td><td class="num">${fmt(p.d)}</td></tr>`).join("") + `</tbody>`;
     $("#tools-more").innerHTML = rows.length > limit ? `Showing ${limit} of ${fmt(rows.length)}. <a href="#tools" id="tools-all">Show all</a>` : `${fmt(rows.length)} tools.`;
     const all = $("#tools-all");
@@ -274,9 +283,14 @@ function about() {
   ${cal ? `<p>On ${esc(cal.date)}, ${cal.cases} cases (picked by a fixed rule from every result group) were solved by the farm's solver and then really installed with <code>micromamba create</code> on GitHub's real arm64 machines, minutes apart. <a href="${esc(cal.run_url)}">Workflow run with all logs</a>.</p>
   <div class="tablewrap"><table><thead><tr><th>Platform</th><th>Machine</th><th class="num">Solver agrees with real install</th><th class="num">Installed</th><th class="num">Failed</th></tr></thead><tbody>${calRows}</tbody></table></div>
   <p class="note small">A real install that succeeds still doesn't prove the tool runs; running each tool's <code>--version</code> on real machines is the next step.</p>` : "<p>Not run yet.</p>"}
+  <h2>On real machines: install + the package's own test</h2>
+  ${s.smoke && Object.keys(s.smoke["osx-arm64"] || {}).length ? `<p>Every week, the most-downloaded tools that the table marks ✓ are installed for real on GitHub's Apple Silicon (macos-15) and arm64 Linux (ubuntu-24.04-arm) machines, and the test that bioconda's own CI ran when it built the package is run again (it ships inside the package). Last run: ${esc(s.smoke_date || "")}.</p>
+  <div class="tablewrap"><table><thead><tr><th>Platform</th><th class="num">✓✓ passed its test</th><th class="num">✓i installed, no test</th><th class="num">✗t test failed</th><th class="num">✗i install failed</th></tr></thead><tbody>${
+    ["osx-arm64", "linux-aarch64"].map((pl) => { const c = s.smoke[pl] || {}; return `<tr><td>${PNAME[pl]}</td><td class="num">${c.runs || 0}</td><td class="num">${c.installs || 0}</td><td class="num">${c.test_fail || 0}</td><td class="num">${c.install_fail || 0}</td></tr>`; }).join("")
+  }</tbody></table></div><p class="note small">In the tools table these show as a small mark next to the status: ${Object.values(SMOKE).slice(0, 4).map((x) => `<b>${x[0]}</b> ${esc(x[1])}`).join("; ")}.</p>` : "<p>The first weekly run hasn't finished yet.</p>"}
   <h2>Limits</h2>
   <ul>
-    <li>These are solve results: “✓” means a consistent set of builds exists and (as calibration shows) installs. It does not prove the program runs correctly.</li>
+    <li>“✓” means a consistent set of builds exists and (as calibration shows) installs. Only the tools marked ✓✓ were also run on a real machine, and a package's own test is usually a quick check such as <code>--help</code>, not a full analysis.</li>
     <li>Pipeline steps are tested as written in their environment file. Many also run from containers instead of conda.</li>
     <li>Packages that conda-forge serves (Perl modules, biopython, mafft…) are tested at conda-forge's newest version, because with the standard setup that is what users get.</li>
   </ul>

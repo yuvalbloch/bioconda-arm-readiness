@@ -5,6 +5,7 @@ State between runs lives on the `results` branch of this repository:
     results.db                  every solver run (immutable, change-only) + the checks table
     plan.json                   the current test plan
     news.json                   the "What's new" list
+    corpora.json                the newest nf-core / Snakemake environment files
     snapshots/<day>/*.json      small evidence files of each night: source URLs, sha256 hashes,
                                 commits of nf-core/modules, snakemake-wrappers, bioconda-recipes,
                                 reason labels, the night's solve statistics
@@ -43,7 +44,7 @@ def load_state(with_logs=False):
             print("no results branch yet: starting fresh")
             return
         git("worktree", "add", "--detach", str(STATE), f"origin/{BRANCH}")
-    for name in STATE_FILES:
+    for name in STATE_FILES + ("corpora.json",):
         if (STATE / name).exists():
             shutil.copy2(STATE / name, DATA / name)
     if (STATE / "snapshots").exists():
@@ -110,6 +111,9 @@ def save_state():
     for name in STATE_FILES:
         if (DATA / name).exists():
             shutil.copy2(DATA / name, STATE / name)
+    corp = latest_snap_dir() / "corpora.json"     # the newest environment files (the site needs them)
+    if corp.exists():
+        shutil.copy2(corp, STATE / "corpora.json")
     for day in SNAP_ROOT.glob("????-??-??"):
         for f in day.glob("*.json"):
             if f.name not in BIG:
