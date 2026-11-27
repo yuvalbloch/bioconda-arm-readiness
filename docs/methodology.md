@@ -82,9 +82,25 @@ Does "the solver says ✓" mean "it really installs"? A sample is checked on rea
 
 **Result (27 Nov 2026):** 102 cases × 2 platforms, **204 of 204 agree** (Apple Silicon: 47 installed, 55 failed; arm64 Linux: 57 installed, 45 failed). The table's earlier results (index of 26 Nov) also agreed on all 204. All known answers matched. Details: [`calibration/report.md`](../calibration/report.md).
 
+## Real machines, weekly: install + the package's own test ([`smoke.py`](../farm/smoke.py))
+
+Every week (workflow [`smoke.yml`](../.github/workflows/smoke.yml)), the 300 most-downloaded tools whose newest version the table marks ✓ on a platform are installed for real on GitHub's `macos-15` (Apple Silicon) and `ubuntu-24.04-arm` machines: `micromamba create` into an empty prefix, conda-forge + bioconda, strict priority, the system pinned to the farm's model as in calibration.
+
+Then the package's **own test** is run. We don't write tests: a conda package carries the test that bioconda's CI ran when it built it (`info/test/run_test.sh`, `.py`, `.pl`, `.r` from conda-build, or the `script` and `python: imports` tests in `info/tests/tests.yaml` from rattler-build). If the test declares extra requirements, they are installed first. Each test runs in the environment with `$PREFIX` set, as in bioconda's CI, with a 15-minute limit.
+
+| Status | Shown | Rule |
+|---|---|---|
+| `runs` | ✓✓ | installed, and the package's own test exited 0 |
+| `installs` | ✓i | installed; the package carries no runnable test |
+| `test_fail` | ✗t | installed, but its own test failed (log attached) |
+| `install_fail` | ✗i | the real install failed although the solver said it installs (log attached) |
+| `infra_error` | ? | timeout or download problem; never shown as a failure |
+
+These are stored like solver results (a new row only when the outcome changes) and shown next to the solver status. A package's own test is usually a quick check (`--help`, `--version`, an import), not a full analysis.
+
 ## Limits
 
-- A successful install doesn't prove that the program runs. Running each tool's `--version` on real arm64 machines is the next planned layer.
+- Only the tools marked ✓✓ were run on a real machine, and only with their package's own (usually quick) test.
 - Pipeline steps are tested as written; many also run from containers instead of conda.
 - `pip:` dependencies in environment files are not solved.
 - Packages served by conda-forge are tested at conda-forge's newest version only.

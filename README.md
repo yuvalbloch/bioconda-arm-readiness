@@ -14,7 +14,8 @@ Which bioconda tools really install natively on **Apple Silicon Macs (osx-arm64)
 - **Pipelines:** every nf-core module and Snakemake wrapper environment file (about 2,600), exactly as written.
 - **Platforms:** `osx-arm64` (Apple Silicon) and `linux-aarch64` (arm64 Linux), compared with `osx-64` (Intel Mac) and `linux-64`.
 - **Setup:** conda-forge + bioconda, strict channel priority (bioconda's documented setup); solved for macOS 14.0 and glibc 2.28 machines.
-- **Calibration:** a sample of solver answers is checked against real `micromamba create` installs on real Apple Silicon and arm64 Linux machines (GitHub Actions `macos-14` and `ubuntu-24.04-arm`).
+- **Calibration:** a sample of solver answers was checked against real `micromamba create` installs on real Apple Silicon and arm64 Linux machines (GitHub Actions `macos-15` and `ubuntu-24.04-arm`): 204 of 204 agreed.
+- **Real machines, weekly:** the 300 most-downloaded tools that install are installed for real on those machines and run their package's own test (the one bioconda's CI ran).
 
 How results are produced, in detail: [docs/methodology.md](docs/methodology.md). Running it yourself: [docs/running.md](docs/running.md).
 
@@ -26,7 +27,7 @@ How results are produced, in detail: [docs/methodology.md](docs/methodology.md).
 | `farm/sources/` | snapshot collectors: package indexes, download counts, nf-core / Snakemake environment files |
 | `calibration/` | solver-vs-real-install checks on real arm64 machines |
 | `site/` | the static website |
-| `.github/workflows/` | the nightly run and the calibration run |
+| `.github/workflows/` | the nightly solve, the weekly real-machine test, the calibration run |
 
 Results and logs live on the `results` branch.
 

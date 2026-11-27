@@ -52,6 +52,10 @@ gh run download <run id> -D cal-run
 python calibration/compare.py cal-run --run-url <run url>   # -> calibration/summary.json + report.md
 ```
 
+## Weekly real-machine test
+
+[`.github/workflows/smoke.yml`](../.github/workflows/smoke.yml) runs every Sunday at 07:17 UTC (or by hand, with the number of tools per platform): `smoke.py select` picks the tools from the current results, 4 Apple Silicon and 4 arm64 Linux machines run `smoke.py run`, and the results are merged, saved and published like the nightly ones. Its publish step never runs at the same time as the nightly one.
+
 ## After changing a rule
 
 Statuses are rebuilt from the stored runs every night (`classify.py`), so a rule change applies to all history at once. Record the change under *Corrections* in [methodology.md](methodology.md) when it changes a published result.
