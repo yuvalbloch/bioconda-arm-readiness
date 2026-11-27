@@ -1,3 +1,4 @@
 py-rattler==0.29.0
 PyYAML>=6
 certifi
+zstandard

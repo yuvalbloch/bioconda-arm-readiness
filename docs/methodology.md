@@ -107,4 +107,6 @@ These are stored like solver results (a new row only when the outcome changes) a
 
 ## Corrections
 
-None so far. Wrong results are reported through [issues](https://github.com/yuvalbloch/bioconda-arm-readiness/issues) and every correction is listed here with its date.
+Wrong results are reported through [issues](https://github.com/yuvalbloch/bioconda-arm-readiness/issues) and every correction is listed here with its date.
+
+- **27 Nov 2026, real-machine test:** the first weekly run marked all 600 installs as "installed, no test", because the farm looked for each package's test in the wrong folder of micromamba's cache. The installs themselves were real, but the "no test" label was a farm bug. Those 600 rows and their logs were removed (`ci.py invalidate smoke 2026-11-27`), the farm now reads the test from the package's own file, and the run was repeated the same day. No solver result was affected.

@@ -11,6 +11,9 @@ on:
       top:
         description: "Tools per platform (most-downloaded first)"
         default: "300"
+      invalidate_day:
+        description: "Farm-bug correction: drop the real-machine results of this day first (YYYY-MM-DD; see methodology)"
+        default: ""
 
 permissions:
   contents: write
@@ -33,6 +36,8 @@ jobs:
           python-version: "3.11"
       - run: python -m pip install --quiet -r farm/requirements.txt
       - run: python farm/ci.py load-state
+      - if: inputs.invalidate_day != ''
+        run: python farm/ci.py invalidate smoke "${{ inputs.invalidate_day }}"
       - run: python farm/classify.py
       - run: python farm/smoke.py select --top "${{ inputs.top || '300' }}" --shards 4 --out smoke-cases.json
       - uses: actions/upload-artifact@v7
@@ -58,7 +63,7 @@ jobs:
       - uses: actions/setup-python@v7
         with:
           python-version: "3.11"
-      - run: python -m pip install --quiet PyYAML certifi
+      - run: python -m pip install --quiet PyYAML certifi zstandard
       - uses: actions/download-artifact@v8
         with:
           name: smoke-cases
@@ -93,6 +98,8 @@ jobs:
           python-version: "3.11"
       - run: python -m pip install --quiet -r farm/requirements.txt
       - run: python farm/ci.py load-state --logs
+      - if: inputs.invalidate_day != ''
+        run: python farm/ci.py invalidate smoke "${{ inputs.invalidate_day }}"
       - uses: actions/download-artifact@v8
         with:
           path: artifacts

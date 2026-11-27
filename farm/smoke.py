@@ -78,9 +78,60 @@ def sh(cmd, env, timeout, cwd=None):
         return "timeout", f"{out}\nTIMEOUT after {timeout}s", time.time() - t
 
 
-def find_info(root, name, version):
-    hits = sorted((root / "pkgs").glob(f"{name}-{version}-*/info"), key=lambda p: p.stat().st_mtime)
-    return hits[-1] if hits else None
+def package_info(prefix, name, workdir):
+    """The package's own info/ folder: from the env's conda-meta record (the extracted cache copy), or,
+    if that copy lacks the tests, from the package file itself (downloaded from the recorded URL)."""
+    recs = sorted(Path(prefix, "conda-meta").glob(f"{name}-*.json"))
+    rec = next((json.loads(r.read_text(encoding="utf-8")) for r in recs
+                if json.loads(r.read_text(encoding="utf-8")).get("name") == name), None)
+    if not rec:
+        return None, "no conda-meta record"
+    ext = rec.get("extracted_package_dir")
+    if ext and ((Path(ext) / "info" / "test").is_dir() or (Path(ext) / "info" / "tests").is_dir()):
+        return Path(ext) / "info", rec.get("url")
+    url = rec.get("url")
+    if not url:
+        return None, "no package URL"
+    dest = Path(workdir) / "pkginfo"
+    shutil.rmtree(dest, ignore_errors=True)
+    extract_info(url, dest)
+    return dest / "info", url
+
+
+def extract_info(url_or_path, dest):
+    """Unpack only info/ from a .conda (zip with info-*.tar.zst) or .tar.bz2 package."""
+    import io
+    import tarfile
+    import urllib.request
+    import zipfile
+    if str(url_or_path).startswith("http"):
+        from common import ssl_context
+        req = urllib.request.Request(url_or_path, headers={"User-Agent": "bioconda-arm-readiness"})
+        blob = urllib.request.urlopen(req, timeout=300, context=ssl_context()).read()
+    else:
+        blob = Path(url_or_path).read_bytes()
+    dest = Path(dest)
+    dest.mkdir(parents=True, exist_ok=True)
+
+    def safe_extract(tf):
+        for m in tf:
+            if not m.name.startswith("info/") or m.issym() or m.islnk() or ".." in Path(m.name).parts:
+                continue
+            target = dest / m.name
+            if m.isdir():
+                target.mkdir(parents=True, exist_ok=True)
+            elif m.isfile():
+                target.parent.mkdir(parents=True, exist_ok=True)
+                target.write_bytes(tf.extractfile(m).read())
+
+    if str(url_or_path).endswith(".conda"):
+        import zstandard
+        z = zipfile.ZipFile(io.BytesIO(blob))
+        name = next(n for n in z.namelist() if n.startswith("info-"))
+        with zstandard.ZstdDecompressor().stream_reader(io.BytesIO(z.read(name))) as r:
+            safe_extract(tarfile.open(fileobj=r, mode="r|"))
+    else:
+        safe_extract(tarfile.open(fileobj=io.BytesIO(blob), mode="r:bz2"))
 
 
 def tests_of(info):
@@ -131,8 +182,12 @@ def run_case(mm, c, plat, root, timeout):
         download_problem = "could not solve" not in low and ("download" in low or "transfer" in low or "connection" in low)
         raw = "error" if code == "timeout" or download_problem else "install_failed"
     else:
-        info = find_info(root / "mamba", c["name"], c["version"])
-        found = tests_of(info) if info else []
+        try:
+            info, src = package_info(prefix, c["name"], prefix.parent)
+        except Exception as e:  # noqa: BLE001 - recorded in the log; the install itself succeeded
+            info, src = None, f"could not read the package's tests: {e}"
+        log.append(f"(package tests read from: {src})")
+        found = tests_of(info) if info and info.is_dir() else []
         reqs = test_requirements(info) if info else []
         if reqs:
             log.append(f"\n$ micromamba install (the test's own requirements): {' '.join(reqs)}")

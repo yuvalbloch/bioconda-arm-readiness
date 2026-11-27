@@ -14,6 +14,7 @@ State between runs lives on the `results` branch of this repository:
     python farm/ci.py load-state [--logs]     results branch -> $BIOARM
     python farm/ci.py pack-shard OUT          tonight's new rows + checks + logs -> OUT/
     python farm/ci.py merge-shards DIR...     merge shard outputs into results.db + logs
+    python farm/ci.py invalidate TYPE DAY     farm-bug correction (see docs/methodology.md#corrections)
     python farm/ci.py save-state              $BIOARM -> results branch (commit + push)
 """
 import json
@@ -108,6 +109,22 @@ def merge_shards(dirs):
     print(f"merged {nr} new rows, {nc} checks")
 
 
+def invalidate(unit_type, snapshot):
+    """Farm-bug correction: drop every stored row of one test type from one night, with its logs and checks.
+    Only for results produced by a bug in the farm itself; each use is listed under Corrections in
+    docs/methodology.md."""
+    con = connect()
+    rows = con.execute("SELECT log FROM runs WHERE unit_type=? AND snapshot=?", (unit_type, snapshot)).fetchall()
+    for (log,) in rows:
+        for base in (LOGS, STATE / "logs"):
+            if log and (base / log).exists():
+                (base / log).unlink()
+    con.execute("DELETE FROM runs WHERE unit_type=? AND snapshot=?", (unit_type, snapshot))
+    con.execute("DELETE FROM checks WHERE unit_type=? AND last_snapshot=?", (unit_type, snapshot))
+    con.commit()
+    print(f"invalidated {len(rows)} {unit_type} rows of {snapshot}")
+
+
 def save_state():
     if not STATE.exists():
         git("worktree", "add", "--orphan", "-b", BRANCH, str(STATE))
@@ -153,6 +170,8 @@ if __name__ == "__main__":
         pack_shard(*args)
     elif cmd == "merge-shards":
         merge_shards(args)
+    elif cmd == "invalidate":
+        invalidate(*args)
     elif cmd == "save-state":
         save_state()
     else:
