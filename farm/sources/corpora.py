@@ -74,6 +74,7 @@ def main():
         all_envs += envs
         sources[name] = meta
     write_json(day / "corpora.json", {"envs": sorted(all_envs, key=lambda e: e["id"]), "sources": sources})
+    write_json(day / "corpora-meta.json", sources)
 
 
 if __name__ == "__main__":

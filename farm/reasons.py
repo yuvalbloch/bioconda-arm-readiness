@@ -19,6 +19,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from common import PLAN_PATH, http_get, latest_snap_dir, read_json, write_json  # noqa: E402
+from classify import current  # noqa: E402
 from db import connect  # noqa: E402
 
 ARM = ["osx-arm64", "linux-aarch64"]
@@ -41,11 +42,9 @@ def main():
     con = connect()
     newest = {p["name"]: p["versions"][0] for p in plan["packages"] if not p.get("conda_forge") and p["versions"]}
     gaps = {}
-    for unit, ver, plat, st in con.execute(
-            "SELECT unit, version, platform, status FROM status WHERE unit_type='pkg' AND snapshot=? "
-            "AND status IN ('rosetta_only','no_build') AND platform IN ('osx-arm64','linux-aarch64')", (day.name,)):
-        if newest.get(unit) == ver:
-            gaps.setdefault(unit, {})[plat] = st
+    for (kind, unit, ver, plat), c in current(con).items():
+        if kind == "pkg" and plat in ARM and c["status"] in ("rosetta_only", "no_build") and newest.get(unit) == ver:
+            gaps.setdefault(unit, {})[plat] = c["status"]
 
     rows = []
     for name, plats in sorted(gaps.items()):

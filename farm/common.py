@@ -19,7 +19,10 @@ RATTLER_CACHE = DATA / "rattler-cache"  # rattler's repodata cache (reused betwe
 PLAN_PATH = DATA / "plan.json"
 DB_PATH = DATA / "results.db"
 LOGS = DATA / "logs"
-SITE = PROJECT / "site"
+SITE_SRC = PROJECT / "site"                # hand-written page, script and style
+SITE = DATA / "site"                       # the built website (data, tool pages, logs)
+SITE_URL = "https://yuvalbloch.com/bioconda-arm-readiness/"   # GitHub Pages of this repo (the owner's custom domain)
+REPO_URL = "https://github.com/yuvalbloch/bioconda-arm-readiness"
 
 # ---- test scope (from the approved plan) ----
 CHANNELS = ["conda-forge", "bioconda"]          # strict priority, bioconda's documented setup
@@ -50,7 +53,10 @@ def ssl_context():
 
 
 def urlopen(url, headers=None, timeout=120):
-    req = urllib.request.Request(url, headers={"User-Agent": UA, **(headers or {})})
+    h = {"User-Agent": UA, **(headers or {})}
+    if url.startswith("https://api.github.com/") and os.environ.get("GITHUB_TOKEN"):
+        h["Authorization"] = f"Bearer {os.environ['GITHUB_TOKEN']}"   # shared CI addresses hit the anonymous rate limit
+    req = urllib.request.Request(url, headers=h)
     return urllib.request.urlopen(req, timeout=timeout, context=ssl_context())
 
 

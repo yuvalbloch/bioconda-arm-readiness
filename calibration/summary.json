@@ -1,0 +1,139 @@
+{
+ "run_url": "https://github.com/yuvalbloch/bioconda-arm-readiness/actions/runs/46005140050",
+ "cases": 102,
+ "date": "2026-11-27",
+ "platforms": {
+  "linux-aarch64": {
+   "runner": "ubuntu-24.04-arm",
+   "micromamba": "2.10.0",
+   "solver": "py-rattler 0.29.0",
+   "checked": 102,
+   "agree": 102,
+   "installed": 57,
+   "failed": 45,
+   "outcomes": {
+    "installed": 57,
+    "solve_failed": 45
+   },
+   "table_checked": 102,
+   "table_agree": 102,
+   "excluded": []
+  },
+  "osx-arm64": {
+   "runner": "macos-15",
+   "micromamba": "2.10.0",
+   "solver": "py-rattler 0.29.0",
+   "checked": 102,
+   "agree": 102,
+   "installed": 47,
+   "failed": 55,
+   "outcomes": {
+    "solve_failed": 55,
+    "installed": 47
+   },
+   "table_checked": 102,
+   "table_agree": 102,
+   "excluded": []
+  }
+ },
+ "mismatches": [],
+ "table_differences": [],
+ "known": [
+  {
+   "platform": "linux-aarch64",
+   "unit": "subread",
+   "version": "2.0.6",
+   "farm": "solved",
+   "real": "installed",
+   "seconds": 15.6
+  },
+  {
+   "platform": "linux-aarch64",
+   "unit": "prokka",
+   "version": "1.15.6",
+   "farm": "solved",
+   "real": "installed",
+   "seconds": 45.7
+  },
+  {
+   "platform": "linux-aarch64",
+   "unit": "subread",
+   "version": "2.0.8",
+   "farm": "solved",
+   "real": "installed",
+   "seconds": 14.2
+  },
+  {
+   "platform": "linux-aarch64",
+   "unit": "samtools",
+   "version": "1.25",
+   "farm": "solved",
+   "real": "installed",
+   "seconds": 4.6
+  },
+  {
+   "platform": "linux-aarch64",
+   "unit": "preseq",
+   "version": "3.2.0",
+   "farm": "solved",
+   "real": "installed",
+   "seconds": 16.4
+  },
+  {
+   "platform": "linux-aarch64",
+   "unit": "quast",
+   "version": "5.3.0",
+   "farm": "solved",
+   "real": "installed",
+   "seconds": 37.6
+  },
+  {
+   "platform": "osx-arm64",
+   "unit": "subread",
+   "version": "2.0.6",
+   "farm": "unsolvable",
+   "real": "solve_failed",
+   "seconds": 13.9
+  },
+  {
+   "platform": "osx-arm64",
+   "unit": "prokka",
+   "version": "1.15.6",
+   "farm": "unsolvable",
+   "real": "solve_failed",
+   "seconds": 12.0
+  },
+  {
+   "platform": "osx-arm64",
+   "unit": "subread",
+   "version": "2.0.8",
+   "farm": "solved",
+   "real": "installed",
+   "seconds": 13.5
+  },
+  {
+   "platform": "osx-arm64",
+   "unit": "samtools",
+   "version": "1.25",
+   "farm": "solved",
+   "real": "installed",
+   "seconds": 9.0
+  },
+  {
+   "platform": "osx-arm64",
+   "unit": "preseq",
+   "version": "3.2.0",
+   "farm": "unsolvable",
+   "real": "solve_failed",
+   "seconds": 21.3
+  },
+  {
+   "platform": "osx-arm64",
+   "unit": "quast",
+   "version": "5.3.0",
+   "farm": "unsolvable",
+   "real": "solve_failed",
+   "seconds": 22.7
+  }
+ ]
+}

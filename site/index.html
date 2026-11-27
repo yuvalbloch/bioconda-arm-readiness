@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bioconda on Apple Silicon</title>
+<meta name="description" content="Which bioconda tools install natively on Apple Silicon Macs (M1–M4, osx-arm64) and arm64 Linux, at which versions, and what to pin instead. Updated nightly from real solver runs, checked against real installs.">
+<link rel="stylesheet" href="style.css">
+<link rel="alternate" type="application/rss+xml" title="Bioconda on Apple Silicon: what's new" href="feed.xml">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <h1>Bioconda on Apple Silicon</h1>
+    <p class="lede">Which bioconda tools really install on <b>Apple Silicon Macs</b> (osx-arm64) and <b>arm64 Linux</b>, at which versions, and what to pin instead.
+      macOS 27 is the last macOS with full Rosetta 2: from macOS 28 (autumn 2027), tools that only have an Intel-Mac build stop working.
+      <span class="made">Every result comes from a real solver run with its log; a sample is checked against real installs on real machines. Updated every night. <span id="updated"></span></span></p>
+    <div class="stats" id="stats"></div>
+    <nav class="tabs" id="tabs">
+      <a href="#gaps" data-tab="gaps">Apple Silicon gaps</a>
+      <a href="#tools" data-tab="tools">All tools</a>
+      <a href="#pipelines" data-tab="pipelines">Pipelines</a>
+      <a href="#blockers" data-tab="blockers">Blockers</a>
+      <a href="#news" data-tab="news">What's new</a>
+      <a href="#check" data-tab="check">Check an environment</a>
+      <a href="#about" data-tab="about">About</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <section class="tab" id="tab-gaps">
+    <p class="note">Tools whose <b>newest version installs on an Intel Mac but not on Apple Silicon</b>, most-downloaded first. They work today only through Rosetta 2, or not at all.
+      “Intel only” = no Apple Silicon build of this version. “Dependency missing” = it has a build, but something it needs doesn't.</p>
+    <div class="controls">
+      <input type="search" id="gaps-q" placeholder="Filter tools…" aria-label="Filter tools">
+      <label><input type="checkbox" id="gaps-pipe"> only tools used by nf-core / Snakemake</label>
+      <button class="btn" id="gaps-csv">Download CSV</button>
+    </div>
+    <div class="tablewrap"><table id="gaps-table"></table></div>
+  </section>
+
+  <section class="tab" id="tab-tools">
+    <div class="controls">
+      <input type="search" id="tools-q" placeholder="Search a tool, e.g. samtools" aria-label="Search tools">
+      <label>Platform <select id="tools-plat"></select></label>
+      <label>Status <select id="tools-st">
+        <option value="">any</option><option value="good">✓ installs</option><option value="bad">✗ doesn't install</option>
+        <option value="R">Intel only (Rosetta)</option><option value="B">no build</option><option value="U">dependency missing</option>
+      </select></label>
+    </div>
+    <div class="legend" id="legend"></div>
+    <div class="tablewrap"><table id="tools-table"></table></div>
+    <p class="more" id="tools-more"></p>
+  </section>
+
+  <section class="tab" id="tab-pipelines">
+    <p class="note">Every <a href="https://github.com/nf-core/modules">nf-core module</a> and <a href="https://github.com/snakemake/snakemake-wrappers">Snakemake wrapper</a> environment file, solved exactly as written. Click a result for its solver log.</p>
+    <div class="stats" id="pipe-stats"></div>
+    <div class="controls">
+      <input type="search" id="pipe-q" placeholder="Search a module or wrapper" aria-label="Search pipeline steps">
+      <label>Source <select id="pipe-src"><option value="">both</option><option value="nf-core">nf-core</option><option value="snakemake">Snakemake</option></select></label>
+      <label>Apple Silicon <select id="pipe-st"><option value="">any</option><option value="S">✓ installs</option><option value="R">Intel Mac only</option><option value="U">fails on both Macs</option></select></label>
+    </div>
+    <div class="tablewrap"><table id="pipe-table"></table></div>
+    <p class="more" id="pipe-more"></p>
+  </section>
+
+  <section class="tab" id="tab-blockers">
+    <p class="note">The packages that most often stop a pipeline step from installing. Counted from the solver's own messages: each step lists the packages the solver reported as having no build for that platform.</p>
+    <div class="grid2">
+      <div><h2>Apple Silicon</h2><p class="muted small">Steps that install on an Intel Mac but not on Apple Silicon</p><div class="tablewrap"><table id="blk-mac"></table></div></div>
+      <div><h2>arm64 Linux</h2><p class="muted small">Steps that install on x86 Linux but not on arm64 Linux</p><div class="tablewrap"><table id="blk-lin"></table></div></div>
+    </div>
+  </section>
+
+  <section class="tab" id="tab-news">
+    <p class="note">What changed on arm64, night by night: tools that became native, lost their build, or stopped installing because of a dependency. Also as an <a href="feed.xml">RSS feed</a>.</p>
+    <div id="news"></div>
+  </section>
+
+  <section class="tab" id="tab-check">
+    <p class="note">Paste an <code>environment.yml</code>. Each package is looked up in this table (a fast lookup, not a full solve), and you get a one-line command to confirm it on your own machine.</p>
+    <textarea id="check-in" spellcheck="false" placeholder="channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - samtools=1.21
+  - subread=2.0.6
+  - multiqc"></textarea>
+    <div class="controls"><button class="btn primary" id="check-go">Check</button></div>
+    <div id="check-out"></div>
+  </section>
+
+  <section class="tab" id="tab-about">
+    <div id="about"></div>
+  </section>
+  <noscript><p>This page needs JavaScript for the tables. Every tool also has a static page, e.g. <a href="pkg/samtools/">samtools</a>, and the raw data is on <a href="https://github.com/yuvalbloch/bioconda-arm-readiness">GitHub</a>.</p></noscript>
+</main>
+<footer class="wrap">
+  Code and data: <a href="https://github.com/yuvalbloch/bioconda-arm-readiness">GitHub</a> ·
+  <a href="https://github.com/yuvalbloch/bioconda-arm-readiness/blob/main/docs/methodology.md">Methodology</a> ·
+  <a href="https://github.com/yuvalbloch/bioconda-arm-readiness/issues/new?title=Wrong%20result">Report a wrong result</a> ·
+  Built with AI (Claude) as part of an experiment; no result is typed in by hand.
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
