@@ -37,6 +37,18 @@ OVERRIDES = {
     "osx-arm64": {"CONDA_OVERRIDE_OSX": dict((n, v) for n, v, _ in VIRTUAL["osx-arm64"])["__osx"]},
     "linux-aarch64": {"CONDA_OVERRIDE_GLIBC": dict((n, v) for n, v, _ in VIRTUAL["linux-aarch64"])["__glibc"]},
 }
+# Activate the environment the way conda-build's test step does (no `micromamba run`): env first on
+# PATH, $PREFIX / $CONDA_PREFIX and the interpreter variables bioconda test scripts use ($R, $PYTHON,
+# $PERL), the packages' own activation scripts sourced; then the test runs. $1 = prefix, rest = command.
+ACTIVATE = r"""
+P="$1"; shift
+export PREFIX="$P" CONDA_PREFIX="$P" PATH="$P/bin:$PATH"
+[ -x "$P/bin/R" ] && export R="$P/bin/R"
+[ -x "$P/bin/python" ] && export PYTHON="$P/bin/python"
+[ -x "$P/bin/perl" ] && export PERL="$P/bin/perl"
+for f in "$P"/etc/conda/activate.d/*.sh; do [ -f "$f" ] && . "$f"; done
+exec "$@"
+"""
 RUNNERS = {"conda-build": [("run_test.sh", ["bash", "-e"]), ("run_test.py", ["python"]), ("run_test.pl", ["perl"]),
                            ("run_test.r", ["Rscript"]), ("run_test.R", ["Rscript"])]}
 
@@ -200,8 +212,7 @@ def run_case(mm, c, plat, root, timeout):
         else:
             raw = "passed"
             for label, argv, f in found:
-                tenv = {**env, "PREFIX": str(prefix)}   # conda-build tests expect $PREFIX, as in bioconda's CI
-                rc, o, s3 = sh(base("run") + ["-p", str(prefix), *argv, str(f)], tenv, timeout, cwd=str(f.parent))
+                rc, o, s3 = sh(["bash", "-c", ACTIVATE, "smoke", str(prefix), *argv, str(f)], env, timeout, cwd=str(f.parent))
                 total += s3
                 tests.append(label)
                 log.append(f"\n## test: {label} -> exit {rc} ({s3:.1f}s)\n--- {f.name} ---\n{f.read_text(encoding='utf-8', errors='replace')[:4000]}\n--- output ---\n{o[-12000:]}")
