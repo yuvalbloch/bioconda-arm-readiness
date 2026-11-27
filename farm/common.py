@@ -21,7 +21,7 @@ DB_PATH = DATA / "results.db"
 LOGS = DATA / "logs"
 SITE_SRC = PROJECT / "site"                # hand-written page, script and style
 SITE = DATA / "site"                       # the built website (data, tool pages, logs)
-SITE_URL = "https://yuvalbloch.com/bioconda-arm-readiness/"   # GitHub Pages of this repo (the owner's custom domain)
+SITE_URL = "https://yuvalbloch.github.io/bioconda-arm-readiness/"   # GitHub Pages of this repo
 REPO_URL = "https://github.com/yuvalbloch/bioconda-arm-readiness"
 
 # ---- test scope (from the approved plan) ----
@@ -39,7 +39,7 @@ VIRTUAL = {
     "osx-arm64": [("__unix", "0", "0"), ("__osx", "14.0", "0"), ("__archspec", "1", "arm64")],
 }
 
-UA = "bioconda-arm-readiness (+https://yuvalbloch.com/wild-west/)"
+UA = "bioconda-arm-readiness (+https://github.com/yuvalbloch/bioconda-arm-readiness)"
 
 
 def ssl_context():

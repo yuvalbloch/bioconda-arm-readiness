@@ -1,5 +1,7 @@
 # Bioconda on Apple Silicon
 
+**Live table: https://yuvalbloch.github.io/bioconda-arm-readiness/**
+
 Which bioconda tools really install natively on **Apple Silicon Macs (osx-arm64)** and **arm64 Linux (linux-aarch64)**, at which versions, what broke and when, and what to pin instead. Updated every night.
 
 **Why now:** macOS 27 is the last macOS with full Rosetta 2. From macOS 28 (autumn 2027), Intel-only (`osx-64`) conda packages, which many Apple Silicon Macs run today through Rosetta without anyone noticing, stop working. In bioconda, Apple Silicon and arm64 Linux builds are opt-in per recipe, so coverage is patchy.
