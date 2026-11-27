@@ -1,0 +1,16 @@
+# private to the owner
+CLAUDE.md
+Bioconda on Apple Silicon*.md
+Phase 0*.md
+private/
+# generated / large
+__pycache__/
+*.pyc
+site/data/
+site/logs/
+Phase 2*.md
+PROGRESS.md
+state/
+out/
+calibration/runs/
+Phase *.md

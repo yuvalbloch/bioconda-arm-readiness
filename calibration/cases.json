@@ -1,0 +1,1373 @@
+{
+ "selected_from_snapshot": "2026-11-26",
+ "rule": [
+  "Selection is a fixed rule, not a hand pick: within each stratum (result group from the farm's",
+  "stored run), units are ordered by sha256(unit name) and the first N are taken. Strata cover both",
+  "\"installs\" and \"doesn't install\" results, so a solver that is wrong in either direction shows up.",
+  "The known answers from the project plan (subread 2.0.6 / 2.0.8, preseq, quast, prokka) are always in."
+ ],
+ "cases": [
+  {
+   "kind": "pkg",
+   "unit": "subread",
+   "version": "2.0.6",
+   "specs": [
+    "subread ==2.0.6"
+   ],
+   "stratum": "known answer",
+   "farm_status_at_selection": {
+    "osx-arm64": "rosetta_only",
+    "linux-aarch64": "native"
+   }
+  },
+  {
+   "kind": "pkg",
+   "unit": "subread",
+   "version": "2.0.8",
+   "specs": [
+    "subread ==2.0.8"
+   ],
+   "stratum": "known answer",
+   "farm_status_at_selection": {
+    "osx-arm64": "native",
+    "linux-aarch64": "native"
+   }
+  },
+  {
+   "kind": "pkg",
+   "unit": "preseq",
+   "version": "3.2.0",
+   "specs": [
+    "preseq ==3.2.0"
+   ],
+   "stratum": "known answer",
+   "farm_status_at_selection": {
+    "osx-arm64": "rosetta_only",
+    "linux-aarch64": "native"
+   }
+  },
+  {
+   "kind": "pkg",
+   "unit": "quast",
+   "version": "5.3.0",
+   "specs": [
+    "quast ==5.3.0"
+   ],
+   "stratum": "known answer",
+   "farm_status_at_selection": {
+    "osx-arm64": "rosetta_only",
+    "linux-aarch64": "native"
+   }
+  },
+  {
+   "kind": "pkg",
+   "unit": "prokka",
+   "version": "1.15.6",
+   "specs": [
+    "prokka ==1.15.6"
+   ],
+   "stratum": "known answer",
+   "farm_status_at_selection": {
+    "osx-arm64": "unsolvable",
+    "linux-aarch64": "noarch"
+   }
+  },
+  {
+   "kind": "pkg",
+   "unit": "samtools",
+   "version": "1.25",
+   "specs": [
+    "samtools ==1.25"
+   ],
+   "stratum": "known answer",
+   "farm_status_at_selection": {
+    "osx-arm64": "native",
+    "linux-aarch64": "native"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "nf-core:amrfinderplus/run",
+   "version": "-",
+   "specs": [
+    "ncbi-amrfinderplus=4.2.7"
+   ],
+   "stratum": "env: solves on Apple Silicon",
+   "farm_status_at_selection": {
+    "osx-arm64": "solves",
+    "linux-aarch64": "solves"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "nf-core:octopusv/clean",
+   "version": "-",
+   "specs": [
+    "octopusv=1.0.0"
+   ],
+   "stratum": "env: solves on Apple Silicon",
+   "farm_status_at_selection": {
+    "osx-arm64": "solves",
+    "linux-aarch64": "solves"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "nf-core:cogaps",
+   "version": "-",
+   "specs": [
+    "bioconductor-cogaps=3.33.0"
+   ],
+   "stratum": "env: solves on Apple Silicon",
+   "farm_status_at_selection": {
+    "osx-arm64": "solves",
+    "linux-aarch64": "solves"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "nf-core:ngscheckmate/vafncm",
+   "version": "-",
+   "specs": [
+    "bcftools=1.21",
+    "htslib=1.21",
+    "ngscheckmate=1.0.1"
+   ],
+   "stratum": "env: solves on Apple Silicon",
+   "farm_status_at_selection": {
+    "osx-arm64": "solves",
+    "linux-aarch64": "solves"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "nf-core:fastaguard",
+   "version": "-",
+   "specs": [
+    "fastaguard=1.1.0"
+   ],
+   "stratum": "env: solves on Apple Silicon",
+   "farm_status_at_selection": {
+    "osx-arm64": "solves",
+    "linux-aarch64": "solves"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "nf-core:hamronization/resfinder",
+   "version": "-",
+   "specs": [
+    "hamronization=1.3.1"
+   ],
+   "stratum": "env: solves on Apple Silicon",
+   "farm_status_at_selection": {
+    "osx-arm64": "solves",
+    "linux-aarch64": "solves"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "nf-core:stitchr/stitchrdl",
+   "version": "-",
+   "specs": [
+    "pip=26.0.1",
+    "python=3.14.4"
+   ],
+   "stratum": "env: solves on Apple Silicon",
+   "farm_status_at_selection": {
+    "osx-arm64": "solves",
+    "linux-aarch64": "solves"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "nf-core:genmod/compound",
+   "version": "-",
+   "specs": [
+    "genmod=3.13.0"
+   ],
+   "stratum": "env: solves on Apple Silicon",
+   "farm_status_at_selection": {
+    "osx-arm64": "solves",
+    "linux-aarch64": "solves"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "nf-core:last/split",
+   "version": "-",
+   "specs": [
+    "last=1652",
+    "gzip=1.14"
+   ],
+   "stratum": "env: solves on Apple Silicon",
+   "farm_status_at_selection": {
+    "osx-arm64": "solves",
+    "linux-aarch64": "solves"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "nf-core:ivar/variants",
+   "version": "-",
+   "specs": [
+    "ivar=1.4.4"
+   ],
+   "stratum": "env: solves on Apple Silicon",
+   "farm_status_at_selection": {
+    "osx-arm64": "solves",
+    "linux-aarch64": "solves"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "snakemake:ragtag/merge",
+   "version": "-",
+   "specs": [
+    "ragtag =2.1.1"
+   ],
+   "stratum": "env: solves on Apple Silicon",
+   "farm_status_at_selection": {
+    "osx-arm64": "solves",
+    "linux-aarch64": "solves"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "nf-core:dds/createproject",
+   "version": "-",
+   "specs": [
+    "pip=26.2.1",
+    "python=3.13"
+   ],
+   "stratum": "env: solves on Apple Silicon",
+   "farm_status_at_selection": {
+    "osx-arm64": "solves",
+    "linux-aarch64": "solves"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "snakemake:gatk/estimatelibrarycomplexity",
+   "version": "-",
+   "specs": [
+    "gatk4 =4.6.2.0",
+    "snakemake-wrapper-utils =0.10.0"
+   ],
+   "stratum": "env: solves on Apple Silicon",
+   "farm_status_at_selection": {
+    "osx-arm64": "solves",
+    "linux-aarch64": "solves"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "snakemake:vcf2maf/vcf2maf",
+   "version": "-",
+   "specs": [
+    "vcf2maf =1.6.22"
+   ],
+   "stratum": "env: solves on Apple Silicon",
+   "farm_status_at_selection": {
+    "osx-arm64": "solves",
+    "linux-aarch64": "solves"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "nf-core:rapidnj",
+   "version": "-",
+   "specs": [
+    "rapidnj=2.3.2",
+    "biopython=1.78"
+   ],
+   "stratum": "env: solves on Apple Silicon",
+   "farm_status_at_selection": {
+    "osx-arm64": "solves",
+    "linux-aarch64": "solves"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "nf-core:trust4",
+   "version": "-",
+   "specs": [
+    "trust4=1.1.5"
+   ],
+   "stratum": "env: solves on Apple Silicon",
+   "farm_status_at_selection": {
+    "osx-arm64": "solves",
+    "linux-aarch64": "solves"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "snakemake:reference/ensembl-regulation",
+   "version": "-",
+   "specs": [
+    "wget =1.25.0"
+   ],
+   "stratum": "env: solves on Apple Silicon",
+   "farm_status_at_selection": {
+    "osx-arm64": "solves",
+    "linux-aarch64": "solves"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "nf-core:salmon/index",
+   "version": "-",
+   "specs": [
+    "salmon=2.11.0"
+   ],
+   "stratum": "env: solves on Apple Silicon",
+   "farm_status_at_selection": {
+    "osx-arm64": "solves",
+    "linux-aarch64": "solves"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "snakemake:gdc-client/download",
+   "version": "-",
+   "specs": [
+    "gdc-client =2.3"
+   ],
+   "stratum": "env: solves on Apple Silicon",
+   "farm_status_at_selection": {
+    "osx-arm64": "solves",
+    "linux-aarch64": "solves"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "snakemake:cnvkit/call",
+   "version": "-",
+   "specs": [
+    "cnvkit =0.9.14"
+   ],
+   "stratum": "env: solves on Apple Silicon",
+   "farm_status_at_selection": {
+    "osx-arm64": "solves",
+    "linux-aarch64": "solves"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "nf-core:shapeit5/phaserare",
+   "version": "-",
+   "specs": [
+    "shapeit5=5.1.1"
+   ],
+   "stratum": "env: Intel-Mac only",
+   "farm_status_at_selection": {
+    "osx-arm64": "rosetta_only",
+    "linux-aarch64": "unsolvable"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "nf-core:mapad/index",
+   "version": "-",
+   "specs": [
+    "mapad=0.45.0"
+   ],
+   "stratum": "env: Intel-Mac only",
+   "farm_status_at_selection": {
+    "osx-arm64": "rosetta_only",
+    "linux-aarch64": "solves"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "nf-core:fastawindows",
+   "version": "-",
+   "specs": [
+    "fasta_windows=0.2.4"
+   ],
+   "stratum": "env: Intel-Mac only",
+   "farm_status_at_selection": {
+    "osx-arm64": "rosetta_only",
+    "linux-aarch64": "unsolvable"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "nf-core:propr/grea",
+   "version": "-",
+   "specs": [
+    "bioconductor-limma=3.58.1",
+    "r-propr=5.1.5"
+   ],
+   "stratum": "env: Intel-Mac only",
+   "farm_status_at_selection": {
+    "osx-arm64": "rosetta_only",
+    "linux-aarch64": "unsolvable"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "snakemake:ptrimmer",
+   "version": "-",
+   "specs": [
+    "ptrimmer =1.4.1"
+   ],
+   "stratum": "env: Intel-Mac only",
+   "farm_status_at_selection": {
+    "osx-arm64": "rosetta_only",
+    "linux-aarch64": "unsolvable"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "nf-core:abricate/summary",
+   "version": "-",
+   "specs": [
+    "abricate=1.0.1"
+   ],
+   "stratum": "env: Intel-Mac only",
+   "farm_status_at_selection": {
+    "osx-arm64": "rosetta_only",
+    "linux-aarch64": "solves"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "nf-core:ultra/index",
+   "version": "-",
+   "specs": [
+    "gffutils=0.11.1",
+    "samtools=1.17",
+    "ultra_bioinformatics=0.1",
+    "python=3.10.12",
+    "sqlite=3.42.0"
+   ],
+   "stratum": "env: Intel-Mac only",
+   "farm_status_at_selection": {
+    "osx-arm64": "rosetta_only",
+    "linux-aarch64": "unsolvable"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "nf-core:faqcs",
+   "version": "-",
+   "specs": [
+    "faqcs=2.10"
+   ],
+   "stratum": "env: Intel-Mac only",
+   "farm_status_at_selection": {
+    "osx-arm64": "rosetta_only",
+    "linux-aarch64": "unsolvable"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "snakemake:bioconvert",
+   "version": "-",
+   "specs": [
+    "bioconvert =1.2.0",
+    "snakemake-wrapper-utils =0.10.0"
+   ],
+   "stratum": "env: Intel-Mac only",
+   "farm_status_at_selection": {
+    "osx-arm64": "rosetta_only",
+    "linux-aarch64": "solves"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "nf-core:svtools/vcftobedpe",
+   "version": "-",
+   "specs": [
+    "svtools=0.5.1"
+   ],
+   "stratum": "env: Intel-Mac only",
+   "farm_status_at_selection": {
+    "osx-arm64": "rosetta_only",
+    "linux-aarch64": "unsolvable"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "nf-core:telogator2",
+   "version": "-",
+   "specs": [
+    "telogator2=2.2.3"
+   ],
+   "stratum": "env: Intel-Mac only",
+   "farm_status_at_selection": {
+    "osx-arm64": "rosetta_only",
+    "linux-aarch64": "unsolvable"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "nf-core:cobs/compactconstruct",
+   "version": "-",
+   "specs": [
+    "cobs=0.3.0"
+   ],
+   "stratum": "env: Intel-Mac only",
+   "farm_status_at_selection": {
+    "osx-arm64": "rosetta_only",
+    "linux-aarch64": "unsolvable"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "nf-core:regenie/step1",
+   "version": "-",
+   "specs": [
+    "regenie=4.1.2"
+   ],
+   "stratum": "env: Intel-Mac only",
+   "farm_status_at_selection": {
+    "osx-arm64": "rosetta_only",
+    "linux-aarch64": "unsolvable"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "snakemake:pretext/map",
+   "version": "-",
+   "specs": [
+    "pretextmap =0.2.4",
+    "samtools =1.25",
+    "snakemake-wrapper-utils =0.10.0"
+   ],
+   "stratum": "env: Intel-Mac only",
+   "farm_status_at_selection": {
+    "osx-arm64": "rosetta_only",
+    "linux-aarch64": "unsolvable"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "nf-core:hifitrimmer/filterbam",
+   "version": "-",
+   "specs": [
+    "hifi_trimmer=2.2.0",
+    "htslib=1.23",
+    "samtools=1.23"
+   ],
+   "stratum": "env: Intel-Mac only",
+   "farm_status_at_selection": {
+    "osx-arm64": "rosetta_only",
+    "linux-aarch64": "unsolvable"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "nf-core:ltrfinder",
+   "version": "-",
+   "specs": [
+    "ltr_finder_parallel=1.1"
+   ],
+   "stratum": "env: Intel-Mac only",
+   "farm_status_at_selection": {
+    "osx-arm64": "rosetta_only",
+    "linux-aarch64": "solves"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "nf-core:metamaps/mapdirectly",
+   "version": "-",
+   "specs": [
+    "metamaps=0.1.633d2e0"
+   ],
+   "stratum": "env: Intel-Mac only",
+   "farm_status_at_selection": {
+    "osx-arm64": "rosetta_only",
+    "linux-aarch64": "unsolvable"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "nf-core:plink/indep",
+   "version": "-",
+   "specs": [
+    "plink=1.90b6.21"
+   ],
+   "stratum": "env: Intel-Mac only",
+   "farm_status_at_selection": {
+    "osx-arm64": "rosetta_only",
+    "linux-aarch64": "unsolvable"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "nf-core:gcta/bivariatereml",
+   "version": "-",
+   "specs": [
+    "gcta=1.94.1"
+   ],
+   "stratum": "env: Intel-Mac only",
+   "farm_status_at_selection": {
+    "osx-arm64": "rosetta_only",
+    "linux-aarch64": "unsolvable"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "nf-core:agat/sqstatbasic",
+   "version": "-",
+   "specs": [
+    "agat=1.6.1"
+   ],
+   "stratum": "env: Intel-Mac only",
+   "farm_status_at_selection": {
+    "osx-arm64": "rosetta_only",
+    "linux-aarch64": "solves"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "nf-core:merquryfk/ploidyplot",
+   "version": "-",
+   "specs": [
+    "fastk=1.2",
+    "merquryfk=1.1.1",
+    "r-argparse=2.2.3",
+    "r-cowplot=1.1.3",
+    "r-ggplot2=3.4.0",
+    "r-viridis=0.6.5"
+   ],
+   "stratum": "env: fails on both Macs",
+   "farm_status_at_selection": {
+    "osx-arm64": "unsolvable",
+    "linux-aarch64": "solves"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "nf-core:sentieon/collectvcmetrics",
+   "version": "-",
+   "specs": [
+    "sentieon=202503.03"
+   ],
+   "stratum": "env: fails on both Macs",
+   "farm_status_at_selection": {
+    "osx-arm64": "unsolvable",
+    "linux-aarch64": "solves"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "nf-core:centrifuge/build",
+   "version": "-",
+   "specs": [
+    "centrifuge=1.0.4.2"
+   ],
+   "stratum": "env: fails on both Macs",
+   "farm_status_at_selection": {
+    "osx-arm64": "unsolvable",
+    "linux-aarch64": "solves"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "nf-core:sentieon/readwriter",
+   "version": "-",
+   "specs": [
+    "sentieon=202503.03"
+   ],
+   "stratum": "env: fails on both Macs",
+   "farm_status_at_selection": {
+    "osx-arm64": "unsolvable",
+    "linux-aarch64": "solves"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "nf-core:dragmap/hashtable",
+   "version": "-",
+   "specs": [
+    "dragmap=1.2.1"
+   ],
+   "stratum": "env: fails on both Macs",
+   "farm_status_at_selection": {
+    "osx-arm64": "unsolvable",
+    "linux-aarch64": "unsolvable"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "nf-core:bwameme/mem",
+   "version": "-",
+   "specs": [
+    "bwa-meme=1.0.6",
+    "mbuffer=20160228",
+    "samtools=1.21"
+   ],
+   "stratum": "env: fails on both Macs",
+   "farm_status_at_selection": {
+    "osx-arm64": "unsolvable",
+    "linux-aarch64": "unsolvable"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "snakemake:microphaser/filter",
+   "version": "-",
+   "specs": [
+    "microphaser =0.8.0"
+   ],
+   "stratum": "env: fails on both Macs",
+   "farm_status_at_selection": {
+    "osx-arm64": "unsolvable",
+    "linux-aarch64": "unsolvable"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "nf-core:paraphase",
+   "version": "-",
+   "specs": [
+    "minimap2=2.31",
+    "paraphase=4.1.0",
+    "samtools=1.25"
+   ],
+   "stratum": "env: fails on both Macs",
+   "farm_status_at_selection": {
+    "osx-arm64": "unsolvable",
+    "linux-aarch64": "unsolvable"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "nf-core:tcoffee/align",
+   "version": "-",
+   "specs": [
+    "t-coffee=13.46.0.919e8c6b",
+    "tmalign=20170708",
+    "pigz=2.8"
+   ],
+   "stratum": "env: fails on both Macs",
+   "farm_status_at_selection": {
+    "osx-arm64": "unsolvable",
+    "linux-aarch64": "solves"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "snakemake:vg/ids",
+   "version": "-",
+   "specs": [
+    "vg =1.76.1"
+   ],
+   "stratum": "env: fails on both Macs",
+   "farm_status_at_selection": {
+    "osx-arm64": "unsolvable",
+    "linux-aarch64": "solves"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "nf-core:quantmsutils/dianncfg",
+   "version": "-",
+   "specs": [
+    "quantms-utils=0.0.23",
+    "sdrf-pipelines=0.0.32",
+    "pandas=2.3.3",
+    "python=3.13.3",
+    "setuptools=80.1"
+   ],
+   "stratum": "env: fails on arm64 Linux only",
+   "farm_status_at_selection": {
+    "osx-arm64": "solves",
+    "linux-aarch64": "unsolvable"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "nf-core:fibertoolsrs/extract",
+   "version": "-",
+   "specs": [
+    "fibertools-rs=0.8.2"
+   ],
+   "stratum": "env: fails on arm64 Linux only",
+   "farm_status_at_selection": {
+    "osx-arm64": "solves",
+    "linux-aarch64": "unsolvable"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "nf-core:windowmasker/mkcounts",
+   "version": "-",
+   "specs": [
+    "blast=2.17.0"
+   ],
+   "stratum": "env: fails on arm64 Linux only",
+   "farm_status_at_selection": {
+    "osx-arm64": "solves",
+    "linux-aarch64": "unsolvable"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "nf-core:quartonotebook",
+   "version": "-",
+   "specs": [
+    "jupyter=1.1.1",
+    "matplotlib=3.10.3",
+    "papermill=2.6.0",
+    "quarto=1.7.31",
+    "r-rmarkdown=2.29"
+   ],
+   "stratum": "env: fails on arm64 Linux only",
+   "farm_status_at_selection": {
+    "osx-arm64": "solves",
+    "linux-aarch64": "unsolvable"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "nf-core:pcaone",
+   "version": "-",
+   "specs": [
+    "pcaone=0.7.2"
+   ],
+   "stratum": "env: fails on arm64 Linux only",
+   "farm_status_at_selection": {
+    "osx-arm64": "solves",
+    "linux-aarch64": "unsolvable"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "nf-core:flash",
+   "version": "-",
+   "specs": [
+    "flash=1.2.11"
+   ],
+   "stratum": "env: fails on arm64 Linux only",
+   "farm_status_at_selection": {
+    "osx-arm64": "solves",
+    "linux-aarch64": "unsolvable"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "snakemake:ucsc/twoBitInfo",
+   "version": "-",
+   "specs": [
+    "ucsc-twobitinfo =502"
+   ],
+   "stratum": "env: fails on arm64 Linux only",
+   "farm_status_at_selection": {
+    "osx-arm64": "solves",
+    "linux-aarch64": "unsolvable"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "snakemake:ucsc/genePredToBed",
+   "version": "-",
+   "specs": [
+    "ucsc-genepredtobed =502"
+   ],
+   "stratum": "env: fails on arm64 Linux only",
+   "farm_status_at_selection": {
+    "osx-arm64": "solves",
+    "linux-aarch64": "unsolvable"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "nf-core:trident/validate",
+   "version": "-",
+   "specs": [
+    "poseidon-trident=2.2.2.1"
+   ],
+   "stratum": "env: fails on arm64 Linux only",
+   "farm_status_at_selection": {
+    "osx-arm64": "solves",
+    "linux-aarch64": "unsolvable"
+   }
+  },
+  {
+   "kind": "env",
+   "unit": "nf-core:trident/fetch",
+   "version": "-",
+   "specs": [
+    "poseidon-trident=2.2.2.1"
+   ],
+   "stratum": "env: fails on arm64 Linux only",
+   "farm_status_at_selection": {
+    "osx-arm64": "solves",
+    "linux-aarch64": "unsolvable"
+   }
+  },
+  {
+   "kind": "pkg",
+   "unit": "bioconductor-sparsearray",
+   "version": "1.12.3",
+   "specs": [
+    "bioconductor-sparsearray ==1.12.3"
+   ],
+   "stratum": "pkg: native on Apple Silicon",
+   "farm_status_at_selection": {
+    "osx-arm64": "native",
+    "linux-aarch64": "native"
+   }
+  },
+  {
+   "kind": "pkg",
+   "unit": "svdb",
+   "version": "2.12.2",
+   "specs": [
+    "svdb ==2.12.2"
+   ],
+   "stratum": "pkg: native on Apple Silicon",
+   "farm_status_at_selection": {
+    "osx-arm64": "native",
+    "linux-aarch64": "native"
+   }
+  },
+  {
+   "kind": "pkg",
+   "unit": "ont-modkit",
+   "version": "0.6.4",
+   "specs": [
+    "ont-modkit ==0.6.4"
+   ],
+   "stratum": "pkg: native on Apple Silicon",
+   "farm_status_at_selection": {
+    "osx-arm64": "native",
+    "linux-aarch64": "native"
+   }
+  },
+  {
+   "kind": "pkg",
+   "unit": "bioawk",
+   "version": "1.0",
+   "specs": [
+    "bioawk ==1.0"
+   ],
+   "stratum": "pkg: native on Apple Silicon",
+   "farm_status_at_selection": {
+    "osx-arm64": "native",
+    "linux-aarch64": "native"
+   }
+  },
+  {
+   "kind": "pkg",
+   "unit": "clustalo",
+   "version": "1.2.4",
+   "specs": [
+    "clustalo ==1.2.4"
+   ],
+   "stratum": "pkg: native on Apple Silicon",
+   "farm_status_at_selection": {
+    "osx-arm64": "native",
+    "linux-aarch64": "native"
+   }
+  },
+  {
+   "kind": "pkg",
+   "unit": "gfatools",
+   "version": "0.5.5",
+   "specs": [
+    "gfatools ==0.5.5"
+   ],
+   "stratum": "pkg: native on Apple Silicon",
+   "farm_status_at_selection": {
+    "osx-arm64": "native",
+    "linux-aarch64": "native"
+   }
+  },
+  {
+   "kind": "pkg",
+   "unit": "phylip",
+   "version": "3.697",
+   "specs": [
+    "phylip ==3.697"
+   ],
+   "stratum": "pkg: native on Apple Silicon",
+   "farm_status_at_selection": {
+    "osx-arm64": "native",
+    "linux-aarch64": "native"
+   }
+  },
+  {
+   "kind": "pkg",
+   "unit": "perbase",
+   "version": "1.4.0",
+   "specs": [
+    "perbase ==1.4.0"
+   ],
+   "stratum": "pkg: native on Apple Silicon",
+   "farm_status_at_selection": {
+    "osx-arm64": "native",
+    "linux-aarch64": "native"
+   }
+  },
+  {
+   "kind": "pkg",
+   "unit": "r-r.oo",
+   "version": "1.27.1",
+   "specs": [
+    "r-r.oo ==1.27.1"
+   ],
+   "stratum": "pkg: noarch",
+   "farm_status_at_selection": {
+    "osx-arm64": "noarch",
+    "linux-aarch64": "noarch"
+   }
+  },
+  {
+   "kind": "pkg",
+   "unit": "bioconductor-ensembldb",
+   "version": "2.34.0",
+   "specs": [
+    "bioconductor-ensembldb ==2.34.0"
+   ],
+   "stratum": "pkg: noarch",
+   "farm_status_at_selection": {
+    "osx-arm64": "noarch",
+    "linux-aarch64": "noarch"
+   }
+  },
+  {
+   "kind": "pkg",
+   "unit": "bioconductor-dexseq",
+   "version": "1.56.0",
+   "specs": [
+    "bioconductor-dexseq ==1.56.0"
+   ],
+   "stratum": "pkg: noarch",
+   "farm_status_at_selection": {
+    "osx-arm64": "noarch",
+    "linux-aarch64": "noarch"
+   }
+  },
+  {
+   "kind": "pkg",
+   "unit": "perl-www-robotrules",
+   "version": "6.03",
+   "specs": [
+    "perl-www-robotrules ==6.03"
+   ],
+   "stratum": "pkg: noarch",
+   "farm_status_at_selection": {
+    "osx-arm64": "noarch",
+    "linux-aarch64": "noarch"
+   }
+  },
+  {
+   "kind": "pkg",
+   "unit": "perl-config-general",
+   "version": "2.67",
+   "specs": [
+    "perl-config-general ==2.67"
+   ],
+   "stratum": "pkg: noarch",
+   "farm_status_at_selection": {
+    "osx-arm64": "noarch",
+    "linux-aarch64": "noarch"
+   }
+  },
+  {
+   "kind": "pkg",
+   "unit": "seqcluster",
+   "version": "1.2.9",
+   "specs": [
+    "seqcluster ==1.2.9"
+   ],
+   "stratum": "pkg: noarch",
+   "farm_status_at_selection": {
+    "osx-arm64": "noarch",
+    "linux-aarch64": "noarch"
+   }
+  },
+  {
+   "kind": "pkg",
+   "unit": "platypus-variant",
+   "version": "0.8.1.2",
+   "specs": [
+    "platypus-variant ==0.8.1.2"
+   ],
+   "stratum": "pkg: Intel-Mac only",
+   "farm_status_at_selection": {
+    "osx-arm64": "rosetta_only",
+    "linux-aarch64": "no_build"
+   }
+  },
+  {
+   "kind": "pkg",
+   "unit": "gcta",
+   "version": "1.94.1",
+   "specs": [
+    "gcta ==1.94.1"
+   ],
+   "stratum": "pkg: Intel-Mac only",
+   "farm_status_at_selection": {
+    "osx-arm64": "rosetta_only",
+    "linux-aarch64": "no_build"
+   }
+  },
+  {
+   "kind": "pkg",
+   "unit": "pretextsnapshot",
+   "version": "0.2.0",
+   "specs": [
+    "pretextsnapshot ==0.2.0"
+   ],
+   "stratum": "pkg: Intel-Mac only",
+   "farm_status_at_selection": {
+    "osx-arm64": "rosetta_only",
+    "linux-aarch64": "no_build"
+   }
+  },
+  {
+   "kind": "pkg",
+   "unit": "perl-gdtextutil",
+   "version": "0.86",
+   "specs": [
+    "perl-gdtextutil ==0.86"
+   ],
+   "stratum": "pkg: Intel-Mac only",
+   "farm_status_at_selection": {
+    "osx-arm64": "rosetta_only",
+    "linux-aarch64": "native"
+   }
+  },
+  {
+   "kind": "pkg",
+   "unit": "fastq-scan",
+   "version": "1.0.1",
+   "specs": [
+    "fastq-scan ==1.0.1"
+   ],
+   "stratum": "pkg: Intel-Mac only",
+   "farm_status_at_selection": {
+    "osx-arm64": "rosetta_only",
+    "linux-aarch64": "native"
+   }
+  },
+  {
+   "kind": "pkg",
+   "unit": "est-sfs",
+   "version": "2.04",
+   "specs": [
+    "est-sfs ==2.04"
+   ],
+   "stratum": "pkg: Intel-Mac only",
+   "farm_status_at_selection": {
+    "osx-arm64": "rosetta_only",
+    "linux-aarch64": "no_build"
+   }
+  },
+  {
+   "kind": "pkg",
+   "unit": "regenie",
+   "version": "4.1.3.1",
+   "specs": [
+    "regenie ==4.1.3.1"
+   ],
+   "stratum": "pkg: Intel-Mac only",
+   "farm_status_at_selection": {
+    "osx-arm64": "rosetta_only",
+    "linux-aarch64": "no_build"
+   }
+  },
+  {
+   "kind": "pkg",
+   "unit": "gem3-mapper",
+   "version": "3.6.1",
+   "specs": [
+    "gem3-mapper ==3.6.1"
+   ],
+   "stratum": "pkg: Intel-Mac only",
+   "farm_status_at_selection": {
+    "osx-arm64": "rosetta_only",
+    "linux-aarch64": "no_build"
+   }
+  },
+  {
+   "kind": "pkg",
+   "unit": "mimseq",
+   "version": "1.3.11",
+   "specs": [
+    "mimseq ==1.3.11"
+   ],
+   "stratum": "pkg: dependency missing on Apple Silicon",
+   "farm_status_at_selection": {
+    "osx-arm64": "unsolvable",
+    "linux-aarch64": "unsolvable"
+   }
+  },
+  {
+   "kind": "pkg",
+   "unit": "bcbio-nextgen",
+   "version": "1.2.9",
+   "specs": [
+    "bcbio-nextgen ==1.2.9"
+   ],
+   "stratum": "pkg: dependency missing on Apple Silicon",
+   "farm_status_at_selection": {
+    "osx-arm64": "unsolvable",
+    "linux-aarch64": "unsolvable"
+   }
+  },
+  {
+   "kind": "pkg",
+   "unit": "gs-tama",
+   "version": "1.0.3",
+   "specs": [
+    "gs-tama ==1.0.3"
+   ],
+   "stratum": "pkg: dependency missing on Apple Silicon",
+   "farm_status_at_selection": {
+    "osx-arm64": "unsolvable",
+    "linux-aarch64": "unsolvable"
+   }
+  },
+  {
+   "kind": "pkg",
+   "unit": "bullseye",
+   "version": "1.1.0",
+   "specs": [
+    "bullseye ==1.1.0"
+   ],
+   "stratum": "pkg: dependency missing on Apple Silicon",
+   "farm_status_at_selection": {
+    "osx-arm64": "unsolvable",
+    "linux-aarch64": "noarch"
+   }
+  },
+  {
+   "kind": "pkg",
+   "unit": "perl-data-stag",
+   "version": "0.14",
+   "specs": [
+    "perl-data-stag ==0.14"
+   ],
+   "stratum": "pkg: dependency missing on Apple Silicon",
+   "farm_status_at_selection": {
+    "osx-arm64": "unsolvable",
+    "linux-aarch64": "noarch"
+   }
+  },
+  {
+   "kind": "pkg",
+   "unit": "abeona",
+   "version": "0.45.0",
+   "specs": [
+    "abeona ==0.45.0"
+   ],
+   "stratum": "pkg: dependency missing on Apple Silicon",
+   "farm_status_at_selection": {
+    "osx-arm64": "unsolvable",
+    "linux-aarch64": "unsolvable"
+   }
+  },
+  {
+   "kind": "pkg",
+   "unit": "lima",
+   "version": "26.2.1",
+   "specs": [
+    "lima ==26.2.1"
+   ],
+   "stratum": "pkg: no build on Apple Silicon",
+   "farm_status_at_selection": {
+    "osx-arm64": "no_build",
+    "linux-aarch64": "no_build"
+   }
+  },
+  {
+   "kind": "pkg",
+   "unit": "metabat2",
+   "version": "2.18_23_gc869c52",
+   "specs": [
+    "metabat2 ==2.18_23_gc869c52"
+   ],
+   "stratum": "pkg: no build on Apple Silicon",
+   "farm_status_at_selection": {
+    "osx-arm64": "no_build",
+    "linux-aarch64": "native"
+   }
+  },
+  {
+   "kind": "pkg",
+   "unit": "bam2fastx",
+   "version": "3.0.0",
+   "specs": [
+    "bam2fastx ==3.0.0"
+   ],
+   "stratum": "pkg: no build on Apple Silicon",
+   "farm_status_at_selection": {
+    "osx-arm64": "no_build",
+    "linux-aarch64": "no_build"
+   }
+  },
+  {
+   "kind": "pkg",
+   "unit": "mehari",
+   "version": "0.51.0",
+   "specs": [
+    "mehari ==0.51.0"
+   ],
+   "stratum": "pkg: no build on Apple Silicon",
+   "farm_status_at_selection": {
+    "osx-arm64": "no_build",
+    "linux-aarch64": "native"
+   }
+  },
+  {
+   "kind": "pkg",
+   "unit": "thermorawfileparser",
+   "version": "2.0.0.dev",
+   "specs": [
+    "thermorawfileparser ==2.0.0.dev"
+   ],
+   "stratum": "pkg: no build on arm64 Linux",
+   "farm_status_at_selection": {
+    "osx-arm64": "native",
+    "linux-aarch64": "no_build"
+   }
+  },
+  {
+   "kind": "pkg",
+   "unit": "admixture",
+   "version": "1.3.0",
+   "specs": [
+    "admixture ==1.3.0"
+   ],
+   "stratum": "pkg: no build on arm64 Linux",
+   "farm_status_at_selection": {
+    "osx-arm64": "rosetta_only",
+    "linux-aarch64": "no_build"
+   }
+  },
+  {
+   "kind": "pkg",
+   "unit": "telseq",
+   "version": "0.0.2",
+   "specs": [
+    "telseq ==0.0.2"
+   ],
+   "stratum": "pkg: no build on arm64 Linux",
+   "farm_status_at_selection": {
+    "osx-arm64": "rosetta_only",
+    "linux-aarch64": "no_build"
+   }
+  },
+  {
+   "kind": "pkg",
+   "unit": "perl-class-method-modifiers",
+   "version": "2.15",
+   "specs": [
+    "perl-class-method-modifiers ==2.15"
+   ],
+   "stratum": "pkg: no build on arm64 Linux",
+   "farm_status_at_selection": {
+    "osx-arm64": "rosetta_only",
+    "linux-aarch64": "no_build"
+   }
+  }
+ ]
+}

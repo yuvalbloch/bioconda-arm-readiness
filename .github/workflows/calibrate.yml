@@ -1,0 +1,45 @@
+name: Calibration (real installs)
+
+# Checks the farm's solver answers against real `micromamba create` installs on real
+# Apple Silicon (macos-14) and arm64 Linux (ubuntu-24.04-arm) machines. See docs/methodology.md.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  PYTHONUNBUFFERED: "1"
+
+jobs:
+  install:
+    strategy:
+      fail-fast: false
+      matrix:
+        target:
+          - { platform: osx-arm64, runner: macos-14, mm: osx-arm64 }
+          - { platform: linux-aarch64, runner: ubuntu-24.04-arm, mm: linux-aarch64 }
+        shard: [1, 2, 3, 4]
+    runs-on: ${{ matrix.target.runner }}
+    timeout-minutes: 340
+    name: ${{ matrix.target.platform }} ${{ matrix.shard }}/4
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.11"
+      - name: Install py-rattler (the farm's solver) and micromamba (the real installer)
+        run: |
+          python -m pip install --quiet -r farm/requirements.txt
+          curl -fsSL "https://micro.mamba.pm/api/micromamba/${{ matrix.target.mm }}/latest" | tar -xj bin/micromamba
+          ./bin/micromamba --version
+      - name: Solve and install every case of this shard
+        env:
+          RUNNER_LABEL: ${{ matrix.target.runner }}
+        run: python calibration/calibrate.py --platform ${{ matrix.target.platform }} --shard ${{ matrix.shard }}/4 --micromamba ./bin/micromamba --out out
+      - uses: actions/upload-artifact@v7
+        if: always()
+        with:
+          name: cal-${{ matrix.target.platform }}-${{ matrix.shard }}
+          path: out
+          retention-days: 30
