@@ -1,6 +1,6 @@
 """Calibration on a real machine: does the farm's solver answer match a real install?
 
-Runs ON the machine of the platform being checked (GitHub's macos-14 = osx-arm64,
+Runs ON the machine of the platform being checked (GitHub's macos-15 = osx-arm64,
 ubuntu-24.04-arm = linux-aarch64). For every case in cases.json (this shard only):
 
   1. farm solve:   the exact same py-rattler call the farm uses (farm/solve.py run_one), live index;

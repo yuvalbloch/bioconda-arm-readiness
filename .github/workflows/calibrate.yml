@@ -1,7 +1,7 @@
 name: Calibration (real installs)
 
 # Checks the farm's solver answers against real `micromamba create` installs on real
-# Apple Silicon (macos-14) and arm64 Linux (ubuntu-24.04-arm) machines. See docs/methodology.md.
+# Apple Silicon (macos-15) and arm64 Linux (ubuntu-24.04-arm) machines. See docs/methodology.md.
 on:
   workflow_dispatch:
 
@@ -17,7 +17,7 @@ jobs:
       fail-fast: false
       matrix:
         target:
-          - { platform: osx-arm64, runner: macos-14, mm: osx-arm64 }
+          - { platform: osx-arm64, runner: macos-15, mm: osx-arm64 }
           - { platform: linux-aarch64, runner: ubuntu-24.04-arm, mm: linux-aarch64 }
         shard: [1, 2, 3, 4]
     runs-on: ${{ matrix.target.runner }}
