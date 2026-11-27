@@ -60,8 +60,11 @@ def pack_shard(out):
     snap = latest_snap_dir().name
     con = connect()
     con.row_factory = sqlite3.Row
-    runs = [dict(r) for r in con.execute("SELECT * FROM runs WHERE snapshot=?", (snap,))]
+    # only rows solved on THIS machine (their logs are here); on a same-day rerun the state already
+    # holds earlier rows of the same snapshot, whose logs live on the results branch.
+    runs = [dict(r) for r in con.execute("SELECT * FROM runs WHERE snapshot=?", (snap,)) if (LOGS / r["log"]).exists()]
     checks = [dict(r) for r in con.execute("SELECT * FROM checks WHERE last_snapshot=?", (snap,))]
+    out.mkdir(parents=True, exist_ok=True)
     for r in runs:
         dst = out / "logs" / r["log"]
         dst.parent.mkdir(parents=True, exist_ok=True)

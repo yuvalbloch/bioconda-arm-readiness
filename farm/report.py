@@ -29,13 +29,14 @@ POPULAR = 300          # alert when one of the 300 most-downloaded tested packag
 MANY_ENVS = 10         # ...or when this many pipeline steps break on one platform in one night
 
 
-def event_text(kind, unit, ver, plat, old, new, bl):
+def event_text(kind, unit, ver, plat, old, new, bl, env_changed=False):
     where = ARM[plat]
-    what = f"{unit} {ver}" if kind == "pkg" else f"pipeline step {unit}"
+    what = f"{unit} {ver}" if kind == "pkg" else f"pipeline step {unit}" + (" (environment file updated)" if env_changed else "")
     dep = f" (blocked by {', '.join(bl[:3])})" if bl else ""
     if old is None:
         good = "installs" if new in GOOD else "does not install"
-        return "new_version", f"New version {unit} {ver} {good} on {where}{dep if new not in GOOD else ''}"
+        new_what = f"New version {unit} {ver}" if kind == "pkg" else f"New pipeline step {unit}"
+        return "new_version", f"{new_what} {good} on {where}{dep if new not in GOOD else ''}"
     if new in GOOD and old not in GOOD:
         return "fixed", (f"{what} became native on {where}" if new == "native" else f"{what} now installs on {where}")
     if old in GOOD and new not in GOOD:
@@ -43,6 +44,23 @@ def event_text(kind, unit, ver, plat, old, new, bl):
             return "lost", f"{what} lost its {where} build"
         return "broke", f"{what} no longer installs on {where}{dep}"
     return None, None
+
+
+def merge_platforms(events):
+    """The same news on both arm64 platforms becomes one line ("... on Apple Silicon and arm64 Linux")."""
+    key = lambda e: (e["type"], e["kind"], e["unit"], e["version"], e["to"] in GOOD, tuple(e["blockers"]))  # noqa: E731
+    groups = {}
+    for e in events:
+        groups.setdefault(key(e), []).append(e)
+    out = []
+    for es in groups.values():
+        if len(es) == 2 and {e["platform"] for e in es} == set(ARM):
+            mac = next(e for e in es if e["platform"] == "osx-arm64")
+            out.append({**mac, "platform": "osx-arm64+linux-aarch64",
+                        "text": mac["text"].replace(ARM["osx-arm64"], "Apple Silicon and arm64 Linux")})
+        else:
+            out += es
+    return out
 
 
 def main():
@@ -58,6 +76,15 @@ def main():
     first_snapshot = con.execute("SELECT MIN(snapshot) FROM status").fetchone()[0]
 
     # status rows that start tonight, with the cell's previous status (if any)
+    # for pipeline steps: did the environment file itself change between the two stored runs?
+    env_specs = {}
+    for u, p, s, sp in con.execute("SELECT unit, platform, snapshot, specs FROM runs WHERE unit_type='env' ORDER BY snapshot"):
+        env_specs.setdefault((u, p), []).append((s, sp))
+
+    def env_changed(u, p):
+        hist = env_specs.get((u, p), [])
+        return len(hist) >= 2 and hist[-1][0] == today and hist[-1][1] != hist[-2][1]
+
     events = []
     rows = con.execute("SELECT unit_type, unit, version, platform, snapshot, status, blockers FROM status ORDER BY snapshot").fetchall()
     prev = {}
@@ -66,15 +93,16 @@ def main():
         if s == today and s != first_snapshot and p in ARM and k in ("pkg", "env") and st != "infra_error":
             old = prev.get(key)
             if not (k == "pkg" and (u, v) not in planned):
-                typ, text = event_text(k, u, v, p, old, st, json.loads(bl))
+                typ, text = event_text(k, u, v, p, old, st, json.loads(bl), k == "env" and env_changed(u, p))
                 if typ:
                     events.append({"date": s, "type": typ, "kind": k, "unit": u, "version": v, "platform": p,
                                    "from": old, "to": st, "blockers": json.loads(bl)[:5], "text": text})
         if st != "infra_error":
             prev[key] = st
 
+    shown = merge_platforms(events)          # display; `events` stays per platform for counting and alerts
     news = [n for n in read_json(NEWS, []) if n["date"] != today]
-    news = sorted(events, key=lambda e: (rank.get(e["unit"], 10**6), e["unit"])) + news
+    news = sorted(shown, key=lambda e: (rank.get(e["unit"], 10**6), e["unit"])) + news
     write_json(NEWS, news[:2000])
 
     # ---- status issue ----
@@ -91,11 +119,11 @@ def main():
                   f"- Farm problems (solver/download errors after one retry): {stats.get('errors', 0)}"
                   + (f", of which {stats.get('error_kept_previous', 0)} kept their previous result" if stats.get('error_kept_previous') else "")]
     lines += ["", "## Changes on arm64 tonight", ""]
-    if not events:
+    if not shown:
         lines.append("None.")
     for typ, label in (("lost", "Lost an arm64 build"), ("broke", "No longer installs"), ("fixed", "Became native / installs again"),
                        ("new_version", "New versions")):
-        es = [e for e in events if e["type"] == typ]
+        es = [e for e in shown if e["type"] == typ]
         if es:
             lines.append(f"### {label} ({len(es)})")
             lines += [f"- {e['text']}" for e in es[:50]]
