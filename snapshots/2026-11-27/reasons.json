@@ -1,0 +1,3344 @@
+{
+ "recipes_commit": "5a41757866a0af53e7313fb8b0f206c1a37605b1",
+ "rows": [
+  {
+   "older_versions_with_build": [],
+   "package": "abra2",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "2.24"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "admixture",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.3.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "admixture",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.3.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "annonars",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "0.45.3"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "ariba",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "2.14.7"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "ariba",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "2.14.7"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "authentict",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.0.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "authentict",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.0.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "bam2fastx",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "3.0.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "bam2fastx",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "3.0.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "bamstats",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.3.5"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "bamstats",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.3.5"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "bandage",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "0.9.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "baysor",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.7.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "baysor",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.7.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "bedgovcf",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.1.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "bedgovcf",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.1.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "biobambam",
+   "platform": "osx-arm64",
+   "reason": "opted_in_no_build",
+   "recipe_platforms": [
+    "linux-aarch64",
+    "osx-arm64"
+   ],
+   "version": "2.0.185"
+  },
+  {
+   "older_versions_with_build": [
+    "1.76.0"
+   ],
+   "package": "bioconductor-affyio",
+   "platform": "osx-arm64",
+   "reason": "dropped",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "1.80.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "bioconductor-csaw",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "1.44.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "bioconductor-dotseq",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.0.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "bioconductor-dotseq",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.0.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "bioconductor-dropletutils",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "1.30.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "bioconductor-ebseq",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "2.8.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "bioconductor-gsva",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "2.4.9"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "bioconductor-illuminaio",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "0.52.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "bioconductor-mofa2",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.20.2"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "bioconductor-mofa2",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.20.2"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "bioconductor-msstats",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "4.18.1"
+  },
+  {
+   "older_versions_with_build": [
+    "4.4.0"
+   ],
+   "package": "bioconductor-xcms",
+   "platform": "osx-arm64",
+   "reason": "dropped",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "4.8.0"
+  },
+  {
+   "older_versions_with_build": [
+    "2.16.0"
+   ],
+   "package": "blast",
+   "platform": "linux-aarch64",
+   "reason": "dropped",
+   "recipe_platforms": [
+    "osx-arm64"
+   ],
+   "version": "2.17.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "bracken",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "3.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "bwa-meme",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.0.6"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "bwa-meme",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.0.6"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "cafe",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "5.1.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "cafe",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "5.1.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "cancerit-allelecount",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "4.3.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "cdna_cupcake",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "29.0.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "cdna_cupcake",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "29.0.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "centrifuge",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "1.0.4.2"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "clame",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "1.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "cnv_facets",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "0.16.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "cnvnator",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "0.4.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "cobs",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "0.3.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "control-freec",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "11.6"
+  },
+  {
+   "older_versions_with_build": [
+    "11.6b"
+   ],
+   "package": "control-freec",
+   "platform": "linux-aarch64",
+   "reason": "dropped",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "11.6"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "crispritz",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "2.10.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "crumble",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.9.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "crumble",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.9.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "debreak",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.3"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "debreak",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.3"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "dragmap",
+   "platform": "osx-arm64",
+   "reason": "opted_in_no_build",
+   "recipe_platforms": [
+    "linux-aarch64",
+    "osx-arm64"
+   ],
+   "version": "1.3.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "duphold",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.2.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "duphold",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.2.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "ea-utils",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.1.2.779"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "ea-utils",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.1.2.779"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "eagle2",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "2.4.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "eagle2",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "2.4.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "echtvar",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.2.4"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "echtvar",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.2.4"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "epic",
+   "platform": "linux-aarch64",
+   "reason": "opted_in_no_build",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "0.2.12"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "epic",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "0.2.12"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "epic2",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "0.0.54"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "est-sfs",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "2.04"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "est-sfs",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "2.04"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "expansionhunterdenovo",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "0.9.0"
+  },
+  {
+   "older_versions_with_build": [
+    "1.3.0",
+    "1.3.1",
+    "1.3.2"
+   ],
+   "package": "falco",
+   "platform": "osx-arm64",
+   "reason": "dropped",
+   "recipe_platforms": [
+    "linux-aarch64",
+    "osx-arm64"
+   ],
+   "version": "2.0.3"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "fasta_windows",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.2.4"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "fasta_windows",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.2.4"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "fastq-scan",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "1.0.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "fastvep",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.6.2"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "fastvep",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.6.2"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "fastx_toolkit",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "0.0.14"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "fibertools-rs",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "osx-arm64"
+   ],
+   "version": "0.13.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "fwdpy11",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "0.24.5"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "ganon",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "2.6.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "gatk4-lite",
+   "platform": "linux-aarch64",
+   "reason": "no_recipe",
+   "recipe_platforms": [],
+   "version": "4.7.0.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "gatk4-lite",
+   "platform": "osx-arm64",
+   "reason": "no_recipe",
+   "recipe_platforms": [],
+   "version": "4.7.0.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "gatk4-main",
+   "platform": "linux-aarch64",
+   "reason": "no_recipe",
+   "recipe_platforms": [],
+   "version": "4.7.0.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "gatk4-main",
+   "platform": "osx-arm64",
+   "reason": "no_recipe",
+   "recipe_platforms": [],
+   "version": "4.7.0.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "gatk4-spark",
+   "platform": "osx-arm64",
+   "reason": "no_recipe",
+   "recipe_platforms": [],
+   "version": "4.7.0.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "gatk4-spark",
+   "platform": "linux-aarch64",
+   "reason": "no_recipe",
+   "recipe_platforms": [],
+   "version": "4.7.0.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "gcta",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.94.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "gcta",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.94.1"
+  },
+  {
+   "older_versions_with_build": [
+    "5.1.0"
+   ],
+   "package": "gecode",
+   "platform": "osx-arm64",
+   "reason": "dropped",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "6.2.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "gem2",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "20200110"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "gem2",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "20200110"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "gem3-mapper",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "3.6.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "gem3-mapper",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "3.6.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "gemini",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "0.30.2"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "genenotebook",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.3.2"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "genenotebook",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.3.2"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "genoboo",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.4.19"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "genoboo",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.4.19"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "genometester4",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "4.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "genometester4",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "4.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "glimpse-bio",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "2.0.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "glimpse-bio",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "2.0.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "glnexus",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "1.4.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "goat",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.2.5"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "goat",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.2.5"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "graphaligner",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.0.20"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "graphaligner",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.0.20"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "graphmap",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "0.6.4"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "graphtyper",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "2.7.7"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "gvcftools",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.17.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "gvcftools",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.17.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "hap.py",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.3.15"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "hap.py",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.3.15"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "harpy",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "4.2"
+  },
+  {
+   "older_versions_with_build": [
+    "1.8.1",
+    "1.8.2",
+    "1.9"
+   ],
+   "package": "harpy",
+   "platform": "linux-aarch64",
+   "reason": "dropped",
+   "recipe_platforms": [],
+   "version": "4.2"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "hatchet",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "2.2.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "hatchet",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "2.2.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "hificnv",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.0.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "hificnv",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.0.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "hiphase",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.7.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "hiphase",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.7.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "hla-la",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.0.4"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "hla-la",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.0.4"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "hts-nim-tools",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "0.3.31"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "humann2",
+   "platform": "linux-aarch64",
+   "reason": "no_recipe",
+   "recipe_platforms": [],
+   "version": "2.8.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "humann2",
+   "platform": "osx-arm64",
+   "reason": "no_recipe",
+   "recipe_platforms": [],
+   "version": "2.8.1"
+  },
+  {
+   "older_versions_with_build": [
+    "1.0.5"
+   ],
+   "package": "humid",
+   "platform": "linux-aarch64",
+   "reason": "dropped",
+   "recipe_platforms": [
+    "linux-aarch64",
+    "osx-arm64"
+   ],
+   "version": "1.0.37"
+  },
+  {
+   "older_versions_with_build": [
+    "1.0.5"
+   ],
+   "package": "humid",
+   "platform": "osx-arm64",
+   "reason": "dropped",
+   "recipe_platforms": [
+    "linux-aarch64",
+    "osx-arm64"
+   ],
+   "version": "1.0.37"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "hypo",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "1.0.3"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "idr",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "2.0.4.2"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "illumina-interop",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "1.9.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "interproscan",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "5.59_91.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "interproscan",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "5.59_91.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "isescan",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "osx-arm64"
+   ],
+   "version": "1.7.3"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "isoseq",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "26.2.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "isoseq",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "26.2.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "isoseq3",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "4.0.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "isoseq3",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "4.0.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "java-jdk",
+   "platform": "linux-aarch64",
+   "reason": "no_recipe",
+   "recipe_platforms": [],
+   "version": "8.0.112"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "java-jdk",
+   "platform": "osx-arm64",
+   "reason": "no_recipe",
+   "recipe_platforms": [],
+   "version": "8.0.112"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "jbrowse",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.16.11"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "jbrowse",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.16.11"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "jcvi",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "1.6.9"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "kat",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "2.4.2"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "kat",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "2.4.2"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "kivvi",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.1.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "kivvi",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.1.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "kled",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "1.2.11"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "kmer-counter",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "0.1.2"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "kmergenie",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "1.7051"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "krakenuniq",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "1.0.4"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "lambda",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "3.1.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "lambda",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "3.1.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "leehom",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.2.15"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "leehom",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.2.15"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "leviosam2",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "0.5.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "lima",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "26.2.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "lima",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "26.2.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "maker",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "3.01.04"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "maker",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "3.01.04"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "manta",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "1.6.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "mapad",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "0.45.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "mapcaller",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.9.9.41"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "mapcaller",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.9.9.41"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "mbuffer",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "20160228"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "megan",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "6.25.10"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "mehari",
+   "platform": "osx-arm64",
+   "reason": "opted_in_no_build",
+   "recipe_platforms": [
+    "linux-aarch64",
+    "osx-arm64"
+   ],
+   "version": "0.51.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "mentalist",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.2.5"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "mentalist",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.2.5"
+  },
+  {
+   "older_versions_with_build": [
+    "2.18"
+   ],
+   "package": "metabat2",
+   "platform": "osx-arm64",
+   "reason": "dropped",
+   "recipe_platforms": [
+    "linux-aarch64",
+    "osx-arm64"
+   ],
+   "version": "2.18_23_gc869c52"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "metacache",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "2.6.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "metamaps",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.1.98102e9"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "metamaps",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.1.98102e9"
+  },
+  {
+   "older_versions_with_build": [
+    "1.0",
+    "1.1",
+    "1.2"
+   ],
+   "package": "metamdbg",
+   "platform": "linux-aarch64",
+   "reason": "dropped",
+   "recipe_platforms": [],
+   "version": "1.4"
+  },
+  {
+   "older_versions_with_build": [
+    "1.1",
+    "1.2"
+   ],
+   "package": "metamdbg",
+   "platform": "osx-arm64",
+   "reason": "dropped",
+   "recipe_platforms": [],
+   "version": "1.4"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "metasnv",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "2.0.4"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "metator",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.3.10"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "metator",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.3.10"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "methbat",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.2.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "methbat",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.2.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "microphaser",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.8.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "microphaser",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.8.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "misopy",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.5.4"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "misopy",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.5.4"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "mitorsaw",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.2.14"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "mitorsaw",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.2.14"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "mm2plus",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.3"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "mm2plus",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.3"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "msisensor",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "0.5"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "msisensor2",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "msisensor2",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "mtm-align",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "20220104"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "mudskipper",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.1.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "mudskipper",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.1.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "muse",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "2.1.2"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "nanoq",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "0.10.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "nanovar",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.8.3"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "nanovar",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.8.3"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "narfmap",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.4.2"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "narfmap",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.4.2"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "ncbi-fcs-gx",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.5.5"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "ncbi-fcs-gx",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.5.5"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "ncbi-ngs-sdk",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "3.0.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "nextgenmap",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.5.5"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "nextgenmap",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.5.5"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "ngless",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.6.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "ngless",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.6.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "oatk",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "oatk",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "openms-thirdparty",
+   "platform": "osx-arm64",
+   "reason": "no_recipe",
+   "recipe_platforms": [],
+   "version": "3.6.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "pandora",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.9.2"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "pandora",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.9.2"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "paragraph",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "2.3"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "paragraph",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "2.3"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "paraphase",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "4.1.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "paraphase",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "4.1.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "parascopy",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "1.19.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "parsnp",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "2.1.6"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "parsnp",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "2.1.6"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "pb-cpg-tools",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "3.0.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "pb-cpg-tools",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "3.0.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "pb-falcon",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "2.2.4"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "pbbam",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "2.4.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "pbbam",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "2.4.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "pbccs",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "6.4.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "pbccs",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "6.4.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "pbjasmine",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "26.1.3"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "pbjasmine",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "26.1.3"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "pbmarkdup",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.2.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "pbmarkdup",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.2.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "pbmm2",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "26.2.99"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "pbmm2",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "26.2.99"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "pbsv",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "2.11.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "pbsv",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "2.11.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "pbtk",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "3.5.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "pbtk",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "3.5.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "pcaone",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.9.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "perl-data-dump",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "1.25"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "perl-date-format",
+   "platform": "linux-aarch64",
+   "reason": "no_recipe",
+   "recipe_platforms": [],
+   "version": "2.30"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "perl-date-format",
+   "platform": "osx-arm64",
+   "reason": "no_recipe",
+   "recipe_platforms": [],
+   "version": "2.30"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "perl-db-file",
+   "platform": "linux-aarch64",
+   "reason": "no_recipe",
+   "recipe_platforms": [],
+   "version": "1.855"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "perl-db-file",
+   "platform": "osx-arm64",
+   "reason": "no_recipe",
+   "recipe_platforms": [],
+   "version": "1.855"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "perl-gd",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "2.84"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "perl-gdtextutil",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "0.86"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "perl-math-random",
+   "platform": "osx-arm64",
+   "reason": "opted_in_no_build",
+   "recipe_platforms": [
+    "linux-aarch64",
+    "osx-arm64"
+   ],
+   "version": "0.72"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "perl-socket",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "2.043"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "perl-time-local",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.2300"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "perl-time-local",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.2300"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "perl-xml-libxslt",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "2.003000"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "pindel",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "0.2.5b9"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "plastid",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.6.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "plastid",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.6.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "platypus-variant",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.8.1.2"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "platypus-variant",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.8.1.2"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "popscle",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "0.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "porechop",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "0.2.4"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "portello",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.7.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "portello",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.7.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "poseidon-trident",
+   "platform": "linux-aarch64",
+   "reason": "opted_in_no_build",
+   "recipe_platforms": [
+    "linux-aarch64",
+    "osx-arm64"
+   ],
+   "version": "2.2.2.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "preseq",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "3.2.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "pretextgraph",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.1.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "pretextgraph",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.1.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "pretextmap",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.2.4"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "pretextmap",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.2.4"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "pretextsnapshot",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.2.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "pretextsnapshot",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.2.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "primerclip",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.3.8"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "primerclip",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.3.8"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "primerprospector",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.0.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "primerprospector",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.0.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "prosolo",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.6.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "prosolo",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.6.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "ptrimmer",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.4.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "ptrimmer",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.4.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "py_fasta_validator",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "0.6"
+  },
+  {
+   "older_versions_with_build": [
+    "3.4.0",
+    "3.4.1"
+   ],
+   "package": "pyopenms",
+   "platform": "linux-aarch64",
+   "reason": "dropped",
+   "recipe_platforms": [
+    "osx-arm64"
+   ],
+   "version": "3.6.0"
+  },
+  {
+   "older_versions_with_build": [
+    "3.0.3",
+    "3.0.4",
+    "3.0.5"
+   ],
+   "package": "pyprophet",
+   "platform": "linux-aarch64",
+   "reason": "dropped",
+   "recipe_platforms": [
+    "linux-aarch64",
+    "osx-arm64"
+   ],
+   "version": "3.0.15"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "quast",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "5.3.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "r-quilt",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "2.0.4"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "r-tailfindr",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.4"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "r-tailfindr",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.4"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "regenie",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "4.1.3.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "regenie",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "4.1.3.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "rhocall",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "0.5.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "rnaquast",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "2.3.2"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "rnaquast",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "2.3.2"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "salsa2",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "2.3"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "salsa2",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "2.3"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "sawfish",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "2.3.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "sawfish",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "2.3.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "scramble",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.0.2"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "scramble",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.0.2"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "sentieon",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "202503.04"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "sequencetools",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "osx-arm64"
+   ],
+   "version": "1.6.0.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "sequenza-utils",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "3.0.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "sequenza-utils",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "3.0.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "shapeit5",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "osx-arm64"
+   ],
+   "version": "5.1.2"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "shasta",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.14.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "shasta",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.14.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "shorah",
+   "platform": "linux-aarch64",
+   "reason": "no_recipe",
+   "recipe_platforms": [],
+   "version": "1.99.2"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "shorah",
+   "platform": "osx-arm64",
+   "reason": "no_recipe",
+   "recipe_platforms": [],
+   "version": "1.99.2"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "sina",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.7.2"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "sina",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.7.2"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "slimfastq",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "2.04"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "slimfastq",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "2.04"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "smoothxg",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "0.8.2"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "smoove",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.2.8"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "smoove",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.2.8"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "souporcell",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "3.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "souporcell",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "3.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "splitubam",
+   "platform": "linux-aarch64",
+   "reason": "opted_in_no_build",
+   "recipe_platforms": [
+    "linux-aarch64",
+    "osx-arm64"
+   ],
+   "version": "0.1.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "splitubam",
+   "platform": "osx-arm64",
+   "reason": "opted_in_no_build",
+   "recipe_platforms": [
+    "linux-aarch64",
+    "osx-arm64"
+   ],
+   "version": "0.1.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "spring",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "1.1.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "stare-abc",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.0.5"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "stare-abc",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.0.5"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "strling",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.6.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "strling",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.6.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "svdss",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "2.1.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "svdss",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "2.1.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "svtk",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "0.0.20190615"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "svync",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.3.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "svync",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.3.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "t_coffee",
+   "platform": "linux-aarch64",
+   "reason": "no_recipe",
+   "recipe_platforms": [],
+   "version": "11.0.8"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "t_coffee",
+   "platform": "osx-arm64",
+   "reason": "no_recipe",
+   "recipe_platforms": [],
+   "version": "11.0.8"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "tagbam",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "0.1.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "tbl2asn",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "25.7"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "tbl2asn",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "25.7"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "tbl2asn-forever",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "25.7.2f"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "telescope",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.0.4.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "telescope",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.0.4.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "telseq",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.0.2"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "telseq",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.0.2"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "thermorawfileparser",
+   "platform": "linux-aarch64",
+   "reason": "opted_in_no_build",
+   "recipe_platforms": [
+    "linux-aarch64",
+    "osx-arm64"
+   ],
+   "version": "2.0.0.dev"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "transrate",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.0.3"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "transrate",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.0.3"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "treerecs",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.2"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "treerecs",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.2"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "treesapp",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "0.11.4"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "trgt",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "5.1.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "trgt",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "5.1.0"
+  },
+  {
+   "older_versions_with_build": [
+    "377",
+    "469",
+    "482"
+   ],
+   "package": "ucsc-bedclip",
+   "platform": "linux-aarch64",
+   "reason": "dropped",
+   "recipe_platforms": [
+    "linux-aarch64",
+    "osx-arm64"
+   ],
+   "version": "502"
+  },
+  {
+   "older_versions_with_build": [
+    "472",
+    "481",
+    "482"
+   ],
+   "package": "ucsc-bedgraphtobigwig",
+   "platform": "linux-aarch64",
+   "reason": "dropped",
+   "recipe_platforms": [
+    "linux-aarch64",
+    "osx-arm64"
+   ],
+   "version": "502"
+  },
+  {
+   "older_versions_with_build": [
+    "469",
+    "473",
+    "482"
+   ],
+   "package": "ucsc-bedtobigbed",
+   "platform": "linux-aarch64",
+   "reason": "dropped",
+   "recipe_platforms": [
+    "linux-aarch64",
+    "osx-arm64"
+   ],
+   "version": "502"
+  },
+  {
+   "older_versions_with_build": [
+    "465",
+    "469",
+    "482"
+   ],
+   "package": "ucsc-bigwigaverageoverbed",
+   "platform": "linux-aarch64",
+   "reason": "dropped",
+   "recipe_platforms": [
+    "linux-aarch64",
+    "osx-arm64"
+   ],
+   "version": "502"
+  },
+  {
+   "older_versions_with_build": [
+    "448",
+    "469",
+    "482"
+   ],
+   "package": "ucsc-bigwigsummary",
+   "platform": "linux-aarch64",
+   "reason": "dropped",
+   "recipe_platforms": [
+    "linux-aarch64",
+    "osx-arm64"
+   ],
+   "version": "502"
+  },
+  {
+   "older_versions_with_build": [
+    "448",
+    "469",
+    "482"
+   ],
+   "package": "ucsc-bigwigtobedgraph",
+   "platform": "linux-aarch64",
+   "reason": "dropped",
+   "recipe_platforms": [
+    "linux-aarch64",
+    "osx-arm64"
+   ],
+   "version": "502"
+  },
+  {
+   "older_versions_with_build": [
+    "448",
+    "469",
+    "482"
+   ],
+   "package": "ucsc-bigwigtowig",
+   "platform": "linux-aarch64",
+   "reason": "dropped",
+   "recipe_platforms": [
+    "linux-aarch64",
+    "osx-arm64"
+   ],
+   "version": "502"
+  },
+  {
+   "older_versions_with_build": [
+    "472",
+    "481",
+    "482"
+   ],
+   "package": "ucsc-blat",
+   "platform": "linux-aarch64",
+   "reason": "dropped",
+   "recipe_platforms": [
+    "linux-aarch64",
+    "osx-arm64"
+   ],
+   "version": "502"
+  },
+  {
+   "older_versions_with_build": [
+    "472",
+    "480",
+    "482"
+   ],
+   "package": "ucsc-fatotwobit",
+   "platform": "linux-aarch64",
+   "reason": "dropped",
+   "recipe_platforms": [
+    "linux-aarch64",
+    "osx-arm64"
+   ],
+   "version": "502"
+  },
+  {
+   "older_versions_with_build": [
+    "448",
+    "473",
+    "482"
+   ],
+   "package": "ucsc-fatovcf",
+   "platform": "linux-aarch64",
+   "reason": "dropped",
+   "recipe_platforms": [
+    "linux-aarch64",
+    "osx-arm64"
+   ],
+   "version": "502"
+  },
+  {
+   "older_versions_with_build": [
+    "447",
+    "482"
+   ],
+   "package": "ucsc-genepredtobed",
+   "platform": "linux-aarch64",
+   "reason": "dropped",
+   "recipe_platforms": [
+    "linux-aarch64",
+    "osx-arm64"
+   ],
+   "version": "502"
+  },
+  {
+   "older_versions_with_build": [
+    "447",
+    "482"
+   ],
+   "package": "ucsc-gtftogenepred",
+   "platform": "linux-aarch64",
+   "reason": "dropped",
+   "recipe_platforms": [
+    "linux-aarch64",
+    "osx-arm64"
+   ],
+   "version": "502"
+  },
+  {
+   "older_versions_with_build": [
+    "447",
+    "482"
+   ],
+   "package": "ucsc-liftover",
+   "platform": "linux-aarch64",
+   "reason": "dropped",
+   "recipe_platforms": [
+    "linux-aarch64",
+    "osx-arm64"
+   ],
+   "version": "502"
+  },
+  {
+   "older_versions_with_build": [
+    "466",
+    "469",
+    "482"
+   ],
+   "package": "ucsc-nibfrag",
+   "platform": "linux-aarch64",
+   "reason": "dropped",
+   "recipe_platforms": [
+    "linux-aarch64",
+    "osx-arm64"
+   ],
+   "version": "502"
+  },
+  {
+   "older_versions_with_build": [
+    "472",
+    "481",
+    "482"
+   ],
+   "package": "ucsc-twobitinfo",
+   "platform": "linux-aarch64",
+   "reason": "dropped",
+   "recipe_platforms": [
+    "linux-aarch64",
+    "osx-arm64"
+   ],
+   "version": "502"
+  },
+  {
+   "older_versions_with_build": [
+    "469",
+    "472",
+    "482"
+   ],
+   "package": "ucsc-twobittofa",
+   "platform": "linux-aarch64",
+   "reason": "dropped",
+   "recipe_platforms": [
+    "linux-aarch64",
+    "osx-arm64"
+   ],
+   "version": "502"
+  },
+  {
+   "older_versions_with_build": [
+    "469",
+    "472",
+    "482"
+   ],
+   "package": "ucsc-wigtobigwig",
+   "platform": "linux-aarch64",
+   "reason": "dropped",
+   "recipe_platforms": [
+    "linux-aarch64",
+    "osx-arm64"
+   ],
+   "version": "502"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "ultra_bioinformatics",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.3.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "ultra_bioinformatics",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.3.0"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "unifrac",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "osx-arm64"
+   ],
+   "version": "1.5.1"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "unifrac-binaries",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "osx-arm64"
+   ],
+   "version": "1.7"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "variantbam",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.4.4a"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "variantbam",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.4.4a"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "vcfexpress",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "0.3.4"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "velocyto.py",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.17.17"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "velocyto.py",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "0.17.17"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "verifybamid",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.1.3"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "verifybamid",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.1.3"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "vg",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "1.76.1"
+  },
+  {
+   "older_versions_with_build": [
+    "0.57721"
+   ],
+   "package": "vt",
+   "platform": "linux-aarch64",
+   "reason": "dropped",
+   "recipe_platforms": [
+    "linux-aarch64",
+    "osx-arm64"
+   ],
+   "version": "2015.11.10"
+  },
+  {
+   "older_versions_with_build": [
+    "0.57721"
+   ],
+   "package": "vt",
+   "platform": "osx-arm64",
+   "reason": "dropped",
+   "recipe_platforms": [
+    "linux-aarch64",
+    "osx-arm64"
+   ],
+   "version": "2015.11.10"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "wfmash",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [
+    "linux-aarch64"
+   ],
+   "version": "0.24.2"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "wham",
+   "platform": "linux-aarch64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.8.0.1.2017.05.03"
+  },
+  {
+   "older_versions_with_build": [],
+   "package": "wham",
+   "platform": "osx-arm64",
+   "reason": "not_opted_in",
+   "recipe_platforms": [],
+   "version": "1.8.0.1.2017.05.03"
+  }
+ ]
+}

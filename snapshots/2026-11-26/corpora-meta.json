@@ -1,0 +1,14 @@
+{
+ "nf-core": {
+  "commit": "f980e72206cf944a45d50a5b484f695740ad6331",
+  "envs": 2093,
+  "sha256": "661168be130d66fa15a284d3cc3fde6ce85f04614b2a96ad647e809bfed7ce71",
+  "url": "https://codeload.github.com/nf-core/modules/tar.gz/f980e72206cf944a45d50a5b484f695740ad6331"
+ },
+ "snakemake": {
+  "commit": "93934d79422e7af7668844faeb6a0baf3ce97cf3",
+  "envs": 485,
+  "sha256": "7f7e44eb39fd6341ba3b737d2c9ca4928d22f3d54342d8aa446e4857c024b15e",
+  "url": "https://codeload.github.com/snakemake/snakemake-wrappers/tar.gz/93934d79422e7af7668844faeb6a0baf3ce97cf3"
+ }
+}

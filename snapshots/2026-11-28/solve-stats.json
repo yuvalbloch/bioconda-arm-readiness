@@ -1,0 +1,155 @@
+{
+ "solves": 31460,
+ "new": 12,
+ "same": 31448,
+ "error_kept_previous": 0,
+ "errors": 16,
+ "seconds": 1235,
+ "error_samples": [
+  {
+   "cell": [
+    "pkg",
+    "tb-profiler",
+    "7.0.1",
+    "linux-64"
+   ],
+   "message": "invalid type: map, expected a string"
+  },
+  {
+   "cell": [
+    "pkg",
+    "tb-profiler",
+    "6.6.6",
+    "linux-64"
+   ],
+   "message": "invalid type: map, expected a string"
+  },
+  {
+   "cell": [
+    "pkg",
+    "tb-profiler",
+    "7.0.1",
+    "linux-aarch64"
+   ],
+   "message": "invalid type: map, expected a string"
+  },
+  {
+   "cell": [
+    "pkg",
+    "tb-profiler",
+    "6.6.6",
+    "linux-aarch64"
+   ],
+   "message": "invalid type: map, expected a string"
+  },
+  {
+   "cell": [
+    "pkg",
+    "tb-profiler",
+    "7.0.1",
+    "osx-64"
+   ],
+   "message": "invalid type: map, expected a string"
+  },
+  {
+   "cell": [
+    "pkg",
+    "tb-profiler",
+    "6.6.6",
+    "osx-64"
+   ],
+   "message": "invalid type: map, expected a string"
+  },
+  {
+   "cell": [
+    "pkg",
+    "tb-profiler",
+    "7.0.1",
+    "osx-arm64"
+   ],
+   "message": "invalid type: map, expected a string"
+  },
+  {
+   "cell": [
+    "pkg",
+    "tb-profiler",
+    "6.6.6",
+    "osx-arm64"
+   ],
+   "message": "invalid type: map, expected a string"
+  },
+  {
+   "cell": [
+    "pkg",
+    "tb-profiler",
+    "6.7.0",
+    "linux-64"
+   ],
+   "message": "invalid type: map, expected a string"
+  },
+  {
+   "cell": [
+    "pkg",
+    "tb-profiler",
+    "6.6.5",
+    "linux-64"
+   ],
+   "message": "invalid type: map, expected a string"
+  },
+  {
+   "cell": [
+    "pkg",
+    "tb-profiler",
+    "6.7.0",
+    "linux-aarch64"
+   ],
+   "message": "invalid type: map, expected a string"
+  },
+  {
+   "cell": [
+    "pkg",
+    "tb-profiler",
+    "6.6.5",
+    "linux-aarch64"
+   ],
+   "message": "invalid type: map, expected a string"
+  },
+  {
+   "cell": [
+    "pkg",
+    "tb-profiler",
+    "6.7.0",
+    "osx-64"
+   ],
+   "message": "invalid type: map, expected a string"
+  },
+  {
+   "cell": [
+    "pkg",
+    "tb-profiler",
+    "6.6.5",
+    "osx-64"
+   ],
+   "message": "invalid type: map, expected a string"
+  },
+  {
+   "cell": [
+    "pkg",
+    "tb-profiler",
+    "6.7.0",
+    "osx-arm64"
+   ],
+   "message": "invalid type: map, expected a string"
+  },
+  {
+   "cell": [
+    "pkg",
+    "tb-profiler",
+    "6.6.5",
+    "osx-arm64"
+   ],
+   "message": "invalid type: map, expected a string"
+  }
+ ],
+ "machines": 8
+}

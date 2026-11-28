@@ -1,0 +1,32 @@
+{
+ "linux-64": {
+  "bytes": 37564118,
+  "last_modified": "Fri, 27 Nov 2026 14:04:23 GMT",
+  "sha256": "210025994efdf672837cc03501f84a179a623e4b55eca0199f355d3b7279c888",
+  "url": "https://conda.anaconda.org/bioconda/linux-64/repodata.json"
+ },
+ "linux-aarch64": {
+  "bytes": 6510179,
+  "last_modified": "Thu, 26 Nov 2026 22:23:44 GMT",
+  "sha256": "a2b75ce064a353b0ecb189c5cdf7021910a854a7bf5ba977f9db51c3ddd5ab80",
+  "url": "https://conda.anaconda.org/bioconda/linux-aarch64/repodata.json"
+ },
+ "noarch": {
+  "bytes": 39225147,
+  "last_modified": "Fri, 27 Nov 2026 15:45:21 GMT",
+  "sha256": "fd91e72861e4b422ae27ced6d953cbc0513a9761bc9047a942224ae07c757a50",
+  "url": "https://conda.anaconda.org/bioconda/noarch/repodata.json"
+ },
+ "osx-64": {
+  "bytes": 29967956,
+  "last_modified": "Fri, 27 Nov 2026 14:25:06 GMT",
+  "sha256": "df2e4af9bf0ed7c6b0faa6f1d36b63dee1bc75a5007c42fecc9868f4171c77a1",
+  "url": "https://conda.anaconda.org/bioconda/osx-64/repodata.json"
+ },
+ "osx-arm64": {
+  "bytes": 4350354,
+  "last_modified": "Thu, 26 Nov 2026 22:23:55 GMT",
+  "sha256": "111ce12adea387a5cf4264b256ef944d25727d912f4bac062c1efa0b9c954b7f",
+  "url": "https://conda.anaconda.org/bioconda/osx-arm64/repodata.json"
+ }
+}
