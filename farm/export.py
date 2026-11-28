@@ -202,6 +202,7 @@ def page(title, desc, body, depth):
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{esc(title)}</title><meta name="description" content="{esc(desc)}">
 <link rel="stylesheet" href="{up}style.css"><link rel="alternate" type="application/rss+xml" title="What's new" href="{up}feed.xml">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G88CJRGNM1"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments)}}gtag("js",new Date());gtag("config","G-G88CJRGNM1");</script>
 </head><body><header class="top"><a class="brand" href="{up}">Bioconda on Apple Silicon</a>
 <nav><a href="{up}#tools">All tools</a><a href="{up}#gaps">Don't work on Apple Silicon</a><a href="{up}#pipelines">Pipelines</a><a href="{up}#news">What's new</a><a href="{up}#check">Check an environment</a><a href="{up}#about">About</a></nav></header>
 <main>{body}</main>
