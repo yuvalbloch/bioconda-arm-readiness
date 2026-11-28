@@ -31,6 +31,6 @@ How results are produced, in detail: [docs/methodology.md](docs/methodology.md).
 
 Results and logs live on the `results` branch.
 
-Built with AI (Claude) as part of an experiment; every result is machine-produced and links to its log. Found a wrong result? Please open an issue with the tool, version and platform.
+Made by Yuval Bloch, with code written with the help of AI (Claude); every result is machine-produced and links to its log. Found a wrong result? Please open an issue with the tool, version and platform.
 
 License: MIT.

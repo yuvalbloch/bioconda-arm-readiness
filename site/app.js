@@ -289,6 +289,11 @@ function about() {
   const calRows = cal ? Object.entries(cal.platforms).map(([pl, p]) =>
     `<tr><td>${PNAME[pl]}</td><td>${esc(p.runner)}</td><td class="num"><b>${p.agree}/${p.checked}</b></td><td class="num">${p.installed}</td><td class="num">${p.failed}</td></tr>`).join("") : "";
   $("#about").innerHTML = `
+  <h2>About this table</h2>
+  <p>Apple Silicon Macs (M1 and later) run tools built for Intel Macs through a translator called Rosetta 2, often without the user noticing. <b>macOS 27 is the last macOS with full Rosetta 2</b>; from macOS 28 (autumn 2027) it is kept only for a small set of games, so bioconda tools that have only an Intel-Mac build will stop working on Macs. In bioconda, Apple Silicon and arm64 Linux builds are opt-in per recipe, and many popular recipes never opted in.</p>
+  <p>This table answers, for each tool: <b>does it install natively on Apple Silicon and on arm64 Linux, at which versions, and if not, why, and which version to use instead?</b> It also covers every nf-core module and Snakemake wrapper, so you can check a whole pipeline. It is re-checked every night, and changes are kept as history in <a href="#news">What's new</a>.</p>
+  <p><b>How to use it:</b> search a tool in <a href="#tools">All tools</a>, see what doesn't work yet in <a href="#gaps">Don't work on Apple Silicon</a>, or paste your <code>environment.yml</code> into <a href="#check">Check an environment</a>. Every result links to the log it came from.</p>
+  <p><b>Who made it:</b> <a href="https://yuvalbloch.com/">Yuval Bloch</a>. The code was written with the help of AI (Claude). No result is typed in by hand or decided by the AI: every ✓ and ✗ comes from a real solver run or a real install, stored with its command, date and log. The code and all data are open on <a href="https://github.com/yuvalbloch/bioconda-arm-readiness">GitHub</a>.</p>
   <h2>How results are produced</h2>
   <ul>
     <li><b>What is tested:</b> ${fmt(s.packages)} bioconda packages (the 1,000 most-downloaded plus every one used by an nf-core module or Snakemake wrapper), newest version plus up to 3 earlier ones (${fmt(s.package_versions)} package versions), and ${fmt(s.envs)} real nf-core / Snakemake environment files.</li>
@@ -300,7 +305,7 @@ function about() {
   <h2>Calibration: solver vs. real installs</h2>
   ${cal ? `<p>On ${esc(cal.date)}, ${cal.cases} cases (picked by a fixed rule from every result group) were solved by the farm's solver and then really installed with <code>micromamba create</code> on GitHub's real arm64 machines, minutes apart. <a href="${esc(cal.run_url)}">Workflow run with all logs</a>.</p>
   <div class="tablewrap"><table><thead><tr><th>Platform</th><th>Machine</th><th class="num">Solver agrees with real install</th><th class="num">Installed</th><th class="num">Failed</th></tr></thead><tbody>${calRows}</tbody></table></div>
-  <p class="note small">A real install that succeeds still doesn't prove the tool runs; running each tool's <code>--version</code> on real machines is the next step.</p>` : "<p>Not run yet.</p>"}
+  <p class="note small">A real install that succeeds doesn't prove the tool runs; that is what the weekly real-machine test below checks.</p>` : "<p>Not run yet.</p>"}
   <h2>On real machines: install + the package's own test</h2>
   ${s.smoke && Object.keys(s.smoke["osx-arm64"] || {}).length ? `<p>Every week, the most-downloaded tools that the table marks ✓ are installed for real on GitHub's Apple Silicon (macos-15) and arm64 Linux (ubuntu-24.04-arm) machines, and the test that bioconda's own CI ran when it built the package is run again (it ships inside the package). Last run: ${esc(s.smoke_date || "")}.</p>
   <div class="tablewrap"><table><thead><tr><th>Platform</th><th class="num">✓✓ passed its test</th><th class="num">✓i installed, no test</th><th class="num">✗t test failed</th><th class="num">✗i install failed</th></tr></thead><tbody>${
